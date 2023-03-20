@@ -12,45 +12,36 @@ function fixNavbar() {
 
 window.addEventListener('scroll', fixNavbar);
 
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+})
 
-// const mediaContainer = document.querySelector('.media');
-// const nextButton = document.querySelector('.next-button');
-// const prevButton = document.querySelector('.prev-button');
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}))
 
-// const mediaCount = mediaContainer.children.length;
-// console.log('media count: ', mediaCount);
-// const columnWidth = mediaContainer.children[0].getBoundingClientRect().width;
-// console.log('width: ', columnWidth);
-// let currentIndex = 0;
+// dropdown code
 
-// // console.log('Current Index:', currentIndex);
+document.addEventListener("click", e => {
+  const isDropdownButton = e.target.matches("[data-dropdown-button]")
+  if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return
 
-// function showCurrentIndex() {
-//   console.log('Current Index:', currentIndex);
-// }
+  let currentDropdown
+  if (isDropdownButton) {
+    currentDropdown = e.target.closest("[data-dropdown]")
+    currentDropdown.classList.toggle("active")
+  }
 
-// function showSlide() {
-//   mediaContainer.style.transform = `translateX(-${currentIndex * columnWidth}px)`;
-// }
+  document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
+    if (dropdown === currentDropdown) return
+    dropdown.classList.remove("active")
+  })
+})
 
-// function prevSlide() {
-//   currentIndex--;
-//   if (currentIndex < 0) {
-//     currentIndex = mediaCount - 1;
-//   }
-//   showSlide();
-//   showCurrentIndex();
-// }
+// carousel
 
-// function nextSlide() {
-//   currentIndex += 1;
-//   if (currentIndex >= mediaCount) {
-//     currentIndex = 0;
-//   }
-//   showSlide();
-//   showCurrentIndex();
-// }
-
-// prevButton.addEventListener('click', prevSlide);
-// nextButton.addEventListener('click', nextSlide);

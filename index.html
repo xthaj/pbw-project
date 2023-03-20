@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Croak Couture</title>
+        <title>Croak Culture</title>
         <!-- <meta name="description" content=""> -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
@@ -16,17 +16,12 @@
                     <img src="image/logo.png" alt="logo">
                 </div>
 
-                <p class="page-title">CROAK COUTURE</p>
+                <p class="page-title">CROAK CULTURE</p>
 
                 <ul>
                     <li>
                         <a href="https://www.instagram.com/athathathatha">
                             <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.twitter.com/athaherself">
-                            <i class="fa-brands fa-twitter"></i>
                         </a>
                     </li>
                     <li>
@@ -38,50 +33,66 @@
             </header>
 
             <nav>
-                <form class="search-form">
-                    <input type="text" placeholder="SEARCH">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
+                <div class="container"> 
+                    <!-- search bar -->
+                    <form class="search-bar" action="">
+                      <input type="text" placeholder="Search.." name="search">
+                      <button type="submit">
+                          <i class="fa fa-search"></i></i>
+                      </button>
+                    </form>
+                  <div class="subcontainer">
+                    <nav class="navbar">
 
-                <ul class="nav__links">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Shop</a></li>
-                  <li><a href="#">About</a></li>
-                </ul>
-
-                <ul class="nav__icons">
-                    <li>
-                        <a href=#>
-                            <i class="fa-solid fa-bag-shopping"></i>
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href=#>
-                            <i class="fa-solid fa-user"></i>
-                        </a>
-
-                        <div class="dropdown-content">
-                            <a href="#">Link1</a>
-                            <a href="#">Link2</a>
-                            <a href="#">Link3</a>
+                      <ul class="nav-menu">
+                        <li class="nav-item">
+                              <a href="#" class="nav-link">Home</a>        
+                         </li>
+                        <li class="nav-item">
+                              <a href="#" class="nav-link">Learn</a>        
+                         </li>
+                        <li class="nav-item">
+                          <div class="dropdown" data-dropdown>
+                            <button class="link" data-dropdown-button>Visit</button>
+                            <div class="dropdown-menu">
+                              <a href="">Link 1</a>
+                              <a href="">Link 2</a>
+                              <a href="">Link 3</a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Support</a>        
+                       </li>
+                       <li class="nav-item">
+                        <div class="dropdown" data-dropdown>
+                          <button class="link" data-dropdown-button>Account</button>
+                          <div class="dropdown-menu">
+                            <a href="">Link 1</a>
+                            <a href="">Link 2</a>
+                            <a href="">Link 3</a>
+                          </div>
                         </div>
-                    </li>
-                </ul>
+                      </li>
+                      </ul>
+                      <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                      </div>
+                    </nav>
+                  </div>
+                 </div>
             </nav>
-              
-            <section class="hero">
-                <img class="hero__background" src="image/hero.png">
-                <div class="hero__text">
-                    <p>A Fashion Brand that Combines 
-                    <br><br>
-                    FIT and FORM</p>
-                    <br>
-                    <button class="hero__button">GALLERY</button>
-                </div>
+            
+            <section class="carousel">
+               <div class="carousel-container">
+                
+               </div>
             </section>
 
             <section class="intro">
-                <h1>Why Croak?</h1>
+                <h1>Welcome!</h1>
                 <div class="intro__container">
                     <img class="intro__logo" src="image/logo.png">
                     <div class="intro__text">
@@ -95,8 +106,19 @@
                         <button class="intro__button">LEARN MORE</button>
                     </div>
                 </div>
-                
             </section>
+
+            <section class="hero">
+               <div class="hero__text">
+                    <p>A Fashion Brand that Combines 
+                    <br><br>
+                    FIT and FORM</p>
+                    <br>
+                    <button class="hero__button">LEARN</button>
+                </div>
+            </section>
+
+                
             <div class="media-scroller">
                 <div class="media">
                 <img src="image/1.png" alt=" Striped Cotton Round Hem T-shirt">
