@@ -89,6 +89,30 @@
                 </div>
             </nav>
 
+            <form action="process_donation.php" method="post" enctype="multipart/form-data">
+                <h2>Support Our Cause</h2>
+                <p>Please choose a donation amount:</p>
+                <label><input type="radio" name="donation_amount" value="25">$25</label>
+                <label><input type="radio" name="donation_amount" value="50">$50</label>
+                <label><input type="radio" name="donation_amount" value="100">$100</label>
+                <label><input type="radio" name="donation_amount" value="other">Other: $<input type="text" name="other_amount"></label>
+                
+                <p>Please choose a donation method:</p>
+                <label><select name="donation_method">
+                  <option value="credit_card">Credit Card</option>
+                  <option value="paypal">PayPal</option>
+                  <option value="check">Check</option>
+                </select></label>
+                
+                <p>Please provide your information:</p>
+                <label>Name: <input type="text" name="name"></label>
+                <label>Email: <input type="email" name="email"></label>
+                <label>Phone: <input type="tel" name="phone"></label>
+                <p>Please upload proof of donation:</p>
+                <input type="file" name="proof">
+                <p><input type="submit" value="Submit Donation"></p>
+              </form>
+              
         <script src="script-home.js"></script>
         
     </body>

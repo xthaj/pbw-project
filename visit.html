@@ -71,7 +71,7 @@
                             <div class="dropdown-menu">
                               <a href="my-visits.html">My Visits</a>
                               <a href="given-support.html">Given Support</a>
-                              <a href="login.html">Log In</a>
+                              <a href="">Log Out</a>
                             </div>
                           </div>
                         </li>
@@ -89,7 +89,52 @@
                 </div>
             </nav>
 
+            <h2>Visit Request Form</h2>
+            <p>Please fill out the form below to request a visit to our museum.</p>
+            <form>
+                <!-- like obviously visit which one i reckon? -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone"><br><br>
+                
+                <label for="location">Destination:</label>
+                <select id="visit-time" name="visit-time">
+                    <option value="morning">Art & Design Museum</option>
+                    <option value="afternoon">History & Culture Museum</option>
+                    <option value="evening">Science & Conservation Museum</option>
+                </select><br><br>
+
+                <label for="visit-date">Visit Date:</label>
+                <input type="date" id="visit-date" name="visit-date"><br><br>
+                
+                <label for="visit-time">Visit Time:</label>
+                <input type="time" id="appt" name="appt">
+                
+                <label for="group-size">Group Size:</label>
+                <input type="number" id="group-size" name="group-size" min="1" max="20"><br><br>
+                
+                <label for="reason-for-visit">Reason for Visit:</label><br>
+                <input type="radio" id="education" name="reason-for-visit" value="education">
+                <label for="education">Education</label><br>
+                <input type="radio" id="research" name="reason-for-visit" value="research">
+                <label for="research">Research</label><br>
+                <input type="radio" id="leisure" name="reason-for-visit" value="leisure">
+                <label for="leisure">Leisure</label><br><br>
+                
+                <label for="additional-requests">Additional Requests:</label><br>
+                <textarea id="additional-requests" name="additional-requests" rows="4" cols="50"></textarea><br><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+
         <script src="script-home.js"></script>
         
     </body>
+
+
 </html>
