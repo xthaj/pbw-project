@@ -484,40 +484,22 @@ INTRO SECTION
 INTRO SECTION
 */
 
-.intro {
-  background-color: var(--green-color);
-  padding: 1em 1em;
-  border: 5px solid red;
-  
+/* #region learn page */
+#learn #post-container {
+  padding: 1em 0;
+}
+#learn .post-image {
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 1em;
 }
 
-.intro .intro__container {
-  display: grid;
-  text-align: center; 
-  /* vertical align */
-  align-items: center; 
-  padding: 1em 1em;
-  margin: 0 5%;
-  grid-template-columns: 1fr auto;
-  border: 5px solid red;
+#learn .post-details {
+  display: flex;
+    justify-content: center;
   }
 
-  #learn #post-container {
-    padding: 1em 0;
-  }
-
-  #learn .post-image {
-    max-width: 200px;
-    height: auto;
-    object-fit: cover;
-    margin-right: 1em;
-  }
-  
-  #learn .post-details {
-    display: flex;
-      justify-content: center;
-    }
-  
 }
 /* #endregion  */
 
