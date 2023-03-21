@@ -478,16 +478,26 @@ nav ul li {
 }
 
 /* #endregion  */
-/* 
-INTRO SECTION
-INTRO SECTION
-INTRO SECTION
-*/
 
 /* #region learn page */
+
+#learn {
+  background-color: var(--cream-color);
+}
+
 #learn #post-container {
+  width: 85%;
+  margin: 0 auto;
   padding: 1em 0;
 }
+
+#learn .post {
+  display: flex;
+  background-color: var(--green-color);
+  padding: 1em 1em;
+  margin: 20px 0;
+}
+
 #learn .post-image {
   max-width: 200px;
   height: auto;
@@ -497,10 +507,43 @@ INTRO SECTION
 
 #learn .post-details {
   display: flex;
-    justify-content: center;
-  }
-
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+#learn .post-title {
+  font-family: var(--secondary-font);
+  color: var(--lightorange-color);
+  font-size: 2em;
+}
+
+#learn .post-date {
+  font-style: italic;
+}
+
+#learn .post-link {
+  text-decoration: none;
+  font-style: italic;
+  color: var(--lightgreen-color);
+}
+
+/* these are for when rendering singular post */
+
+.blogposts-changepost {
+  display: block !important;
+  text-align: center;
+  background-color: var(--cream-color) !important;
+}
+
+.blogposts-back-to-learn {
+  cursor: pointer;
+}
+
+.blogposts-changegreen {
+  color: var(--green-color) !important;
+}
+
+
 /* #endregion  */
 
 /* #region Visit */

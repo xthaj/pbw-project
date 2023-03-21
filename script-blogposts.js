@@ -184,13 +184,12 @@ function renderPosts() {
     });
 
     postLink.classList.add('blogposts-back-to-learn');
-    postLink.classList.add('blogposts-changelightgreen');
+    // postLink.classList.add('blogposts-changelightgreen');
     postTitle.classList.add('blogposts-changegreen');
     postDate.classList.add('blogposts-changegreen');
     postContent.classList.add('blogposts-changegreen');
     postContent.classList.add('blogposts-changegreen');
 
-    // Add the post--single class to the post element
     post.classList.add('blogposts-changepost');
     postContainer.appendChild(postClone);
 }
