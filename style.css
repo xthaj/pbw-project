@@ -36,6 +36,14 @@ button:hover {
 i {
   font-size: 1em;
 }
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
 /* #endregion  */
 
 /* #region Header Styling  */
@@ -542,10 +550,51 @@ nav ul li {
 .blogposts-changegreen {
   color: var(--green-color) !important;
 }
-
-
 /* #endregion  */
 
 /* #region Visit */
+#visit form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 3px;
+}
+#visit label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+#visit label span {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+#visit input[type="text"],
+#visit input[type="email"],
+#visit input[type="tel"],
+#visit select,
+#visit input[type="date"],
+#visit input[type="time"],
+#visit textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 500px;
+}
+#visit input[type="submit"] {
+  background-color: gray;
+  color: white;
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
 
 /* #endregion */
