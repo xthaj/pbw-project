@@ -307,6 +307,57 @@ nav ul li {
 }
 /* #endregion navbar styling*/
 
+/* #region Footer Styling */
+footer  {
+  background-color: var(--green-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-wrap {
+  align-self: center;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  padding: 20px;
+}
+
+.footer-col a {
+  color: var(--cream-color);
+}
+
+.footer-col p {
+  color: var(--lightorange-color);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  color: var(--cream-color);
+  margin-bottom: 10px;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-github {
+  font-size: 5em;
+  color: var(--cream-color);
+  /* text-align: left; */
+}
+
+/* #endregion Foota Styling */
+
 /* #region login page */
 
  #login-page { /*body */
@@ -561,28 +612,31 @@ nav ul li {
 
 /* #endregion  */
 
-/* #region Visit */
-#visit {
+/* #region Visit, Support */
+#visit,
+#support {
   background-color: var(--cream-color);
 }
 
-#visit h2 {
+#visit h2,
+#support h2 {
   text-align: center;
   padding-top: 1em;
   color: var(--green-color);
 }
 
-#visit-form form {
+#visit-form form,
+#support-form form {
   /* this is needed to center the form */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 0px 20px; */
-  padding-bottom: 10px;
+  padding: 0 1em 1em;
   /* margin-bottom: 1em; */
 }
 
-#visit-form label {
+#visit-form label,
+#support-form label {
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
@@ -590,8 +644,10 @@ nav ul li {
   max-width: 500px;
 }
 
-#visit-form label span {
+#visit-form label span,
+#support-form label span {
   margin-bottom: 10px;
+  font-size: 1.2em;
   font-weight: bold;
 }
 
@@ -602,7 +658,14 @@ nav ul li {
 #visit-form input[type="date"],
 #visit-form input[type="time"],
 #visit-form input[type="number"],
-#visit-form textarea {
+#visit-form textarea,
+/* support form separator */
+#support-form input[type="text"],
+#support-form input[type="email"],
+#support-form input[type="tel"],
+#support-form select,
+#support-form input[type="number"],
+#support-form textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -611,20 +674,24 @@ nav ul li {
   max-width: 500px;
 }
 
-#visit-form input[type="submit"] {
-  background-color: gray;
-  color: white;
-  border: 0;
+.form-submit-btn {
+  width: 250px;
+  background-color: var(--lightorange-color);
+  color: var(--green-color);
+  font-size: 1.2em;
+  border: 1px solid var(--green-color);
   padding: 8px;
   border-radius: 4px;
   cursor: pointer;
 }
 
-#visit-form .radio-menus input[type="radio"] {
+#visit-form .radio-menus input[type="radio"],
+#support-form .radio-menus input[type="radio"] {
   display: none;
 }
 
-#visit-form .radio-menus label {
+#visit-form .radio-menus label,
+#support-form .radio-menus label {
   margin-bottom: 5px;
   display: inline-block;
   padding: 5px 10px;
@@ -636,9 +703,37 @@ nav ul li {
   cursor: pointer;
 }
 
-#visit-form .radio-menus input[type="radio"]:checked + label {
+#visit-form .radio-menus input[type="radio"]:checked + label,
+#support-form .radio-menus input[type="radio"]:checked + label {
   background-color: var(--green-color);
   color: var(--cream-color);
 }
 
+/* this is for isian */
+#support-form .radio-menus div:last-child label {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+}
+
+#support-form .checkbox-label p {
+  font-style: italic;
+  color: var(--green-color);
+  padding-bottom: 10px;
+}
+
+#support-form .checkbox-label div {
+  display: flex;
+}
+
+/* #support-form .radio-menus input[type="file"] {
+  background-color: var(--green-color);
+  color: var(--cream-color);
+  
+  cant be styled apparently
+} */
+
 /* #endregion */
+
+
+heup!
