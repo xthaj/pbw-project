@@ -550,43 +550,68 @@ nav ul li {
 .blogposts-changegreen {
   color: var(--green-color) !important;
 }
+
+/* responsivity */
+
+@media(max-width:830px) {
+  #learn #post-container {
+    width: 100%;
+  }
+}
+
 /* #endregion  */
 
 /* #region Visit */
-#visit form {
+#visit {
+  background-color: var(--cream-color);
+}
+
+#visit h2 {
+  text-align: center;
+  padding-top: 1em;
+  color: var(--green-color);
+}
+
+#visit-form form {
+  /* this is needed to center the form */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  background-color: whitesmoke;
-  border-radius: 3px;
+  /* padding: 0px 20px; */
+  padding-bottom: 10px;
+  /* margin-bottom: 1em; */
 }
-#visit label {
+
+#visit-form label {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 1em;
   width: 100%;
   max-width: 500px;
 }
-#visit label span {
-  margin-bottom: 5px;
+
+#visit-form label span {
+  margin-bottom: 10px;
   font-weight: bold;
 }
-#visit input[type="text"],
-#visit input[type="email"],
-#visit input[type="tel"],
-#visit select,
-#visit input[type="date"],
-#visit input[type="time"],
-#visit textarea {
-  padding: 8px;
+
+#visit-form input[type="text"],
+#visit-form input[type="email"],
+#visit-form input[type="tel"],
+#visit-form select,
+#visit-form input[type="date"],
+#visit-form input[type="time"],
+#visit-form input[type="number"],
+#visit-form textarea {
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   width: 100%;
   max-width: 500px;
 }
-#visit input[type="submit"] {
+
+#visit-form input[type="submit"] {
   background-color: gray;
   color: white;
   border: 0;
@@ -595,6 +620,25 @@ nav ul li {
   cursor: pointer;
 }
 
+#visit-form .radio-menus input[type="radio"] {
+  display: none;
+}
 
+#visit-form .radio-menus label {
+  margin-bottom: 5px;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--green-color);
+  border: 1px solid var(--green-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#visit-form .radio-menus input[type="radio"]:checked + label {
+  background-color: var(--green-color);
+  color: var(--cream-color);
+}
 
 /* #endregion */
