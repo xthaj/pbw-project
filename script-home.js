@@ -43,5 +43,13 @@ document.addEventListener("click", e => {
   })
 })
 
-// carousel
+// submit forms
+
+const submitButtons = document.querySelectorAll('.form-submit-btn');
+
+submitButtons.forEach(function(button) {
+  button.addEventListener('click', function() {
+    button.style.opacity = '0.6';
+  });
+});
 

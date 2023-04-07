@@ -92,29 +92,113 @@
                 <h2>Support Our Cause</h2>
                 <p>Please fill out the form below to support Croak Culture financially.</p>
 
-                <div id="support-form"></div>
-                <p>Please choose a donation amount:</p>
-                <label><input type="radio" name="donation_amount" value="25">$25</label>
-                <label><input type="radio" name="donation_amount" value="50">$50</label>
-                <label><input type="radio" name="donation_amount" value="100">$100</label>
-                <label><input type="radio" name="donation_amount" value="other">Other: $<input type="text" name="other_amount"></label>
+                <div id="support-form">
+                  <form>
+                    <label>
+                      <span>Name</span>
+                      <input type="text" id="name" name="name">
+                    </label>
+                    
+                    <label>
+                      <span>Email</span>
+                      <input type="email" id="email" name="email">
+                    </label>
+                    
+                    <label>
+                      <span>Phone</span>
+                      <input type="tel" id="phone" name="phone">
+                    </label>
+                    
+                    <label>
+                      <span>Donation Amount</span>
+                        <div class="radio-menus">
+                          <div>
+                            <input type="radio" id="donation-25" name="donation_amount" value="25">
+                            <label for="donation-25">Rp25,000</label>
+                          </div>
+                          <div>
+                            <input type="radio" id="donation-50" name="donation_amount" value="50">
+                            <label for="donation-50">Rp50,000</label>
+                          </div>
+                          <div>
+                            <input type="radio" id="donation-100" name="donation_amount" value="100">
+                            <label for="donation-100">Rp100,000</label>
+                          </div>
+                          <div>
+                            <input type="radio" id="donation-other" name="donation_amount" value="other">
+                            <label for="donation-other">Rp<input type="text" name="other_amount"></label>
+                          </div>
+                        </div>
+                    </label>
                 
-                <p>Please choose a donation method:</p>
-                <label><select name="donation_method">
-                  <option value="credit_card">Credit Card</option>
-                  <option value="paypal">PayPal</option>
-                  <option value="check">Check</option>
-                </select></label>
+                    <label>
+                      <span>Donation Method</span>
+                      <select id="donation-method" name="donation_method">
+                        <option value="" disabled selected></option>
+                        <option value="transfer_bank">Transfer Bank</option>
+                        <option value="QRIS">QRIS</option>
+                        <option value="supermarket">Alfamart/Indomart/Alfamidi</option>
+                      </select>
+                    </label>
                 
-                <p>Please provide your information:</p>
-                <label>Name: <input type="text" name="name"></label>
-                <label>Email: <input type="email" name="email"></label>
-                <label>Phone: <input type="tel" name="phone"></label>
-                <p>Please upload proof of donation:</p>
-                <input type="file" name="proof">
-                <p><input type="submit" value="Submit Donation"></p>
- 
-              
+                
+                    <label>
+                      <span>Proof of Donation</span>
+                      <input type="file" id="proof" name="proof">
+                    </label>
+
+                    <label class="checkbox-label">
+                      <span for="preference">Preference</span>
+                      <p>I want my money to be used for...</p>
+                      <div>
+                        <label for="new-collections">Exhibits Preservation</label>
+                        <input type="checkbox" id="preserve" name="preserve" value="false">
+                      </div>
+
+                      <div>
+                        <label for="projects">Fund Our Projects</label>
+                        <input type="checkbox" id="projects" name="projects" value="false">
+                      </div>
+
+                      <div>
+                        <label for="projects">Exhibits Acquirements</label>
+                        <input type="checkbox" id="acquire" name="acquire" value="false">
+                      </div>
+                    </label>
+                
+                    <input type="submit" value="Submit Donation" class="form-submit-btn">
+                  </form>
+                </div>
+                
+                <footer>
+
+                  <div class="footer-wrap">
+                    <div class="footer-logo">
+                      <a href="https://github.com/xthaj" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                      </a>
+                    </div>
+  
+                    <div class="footer-col">
+                      <p>About the website</p>
+                      <ul>
+                        <li><a href="https://www.si.edu" target="_blank" rel="noopener noreferrer">Reference and Sources</a></li>
+                        <li><a href="https://youtube.com/playlist?list=PLl2VaUX1bspnsR8EGU1zAyygDsSYrH8P2" target="_blank" rel="noopener noreferrer">Tutorials Followed</a></li>
+                        <li><a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Important</a></li>
+                      </ul>
+                    </div>
+  
+                    <div class="footer-col">
+                      <p>For & By</p>
+                      <ul>
+                        <li>PBW Project 2023</li>
+                        <li>Atha Juli R</li>
+                      </ul>
+                    </div>
+
+                  </div>
+                </footer>
+                
         <script src="script-home.js"></script>
         
     </body>

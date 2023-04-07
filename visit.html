@@ -10,7 +10,7 @@
 
     </head>
 
-    <body >
+    <body id="visit">
             <header>
                 <div class="logo">
                     <img src="image/logo.png" alt="logo">
@@ -89,62 +89,76 @@
                 </div>
             </nav>
 
-            <h2>Visit Request Form</h2>
+            <h2>Visit Us!</h2>
+            
             <p>Please fill out the form below to request a visit to our museum.</p>
-            <div id="visit">
+            
+            <div id="visit-form">
               <form>
                 <label>
-                  <span>Name:</span>
+                  <span>Name</span>
                   <input type="text" id="name" name="name">
                 </label>
+
                 <label>
-                  <span>Email:</span>
+                  <span>Email</span>
                   <input type="email" id="email" name="email">
                 </label>
+
                 <label>
-                  <span>Phone:</span>
+                  <span>Phone</span>
                   <input type="tel" id="phone" name="phone">
                 </label>
+
                 <label>
-                  <span>Destination:</span>
-                  <select id="visit-time" name="visit-time">
-                    <option value="morning">Art &amp; Design Museum</option>
-                    <option value="afternoon">History &amp; Culture Museum</option>
-                    <option value="evening">Science &amp; Conservation Museum</option>
+                  <span>Destination</span>
+                  <select id="destination" name="destination">
+                    <option value="" disabled selected></option>
+                    <option value="art">Art & Design Museum</option>
+                    <option value="history">History & Culture Museum</option>
+                    <option value="science">Science & Conservation Museum</option>
                   </select>
                 </label>
+
                 <label>
-                  <span>Visit Date:</span>
+                  <span>Visit Date</span>
                   <input type="date" id="visit-date" name="visit-date">
                 </label>
+
                 <label>
-                  <span>Visit Time:</span>
+                  <span>Visit Time</span>
                   <input type="time" id="appt" name="appt">
                 </label>
+
                 <label>
-                  <span>Group Size:</span>
+                  <span>Group Size</span>
                   <input type="number" id="group-size" name="group-size" min="1" max="20">
                 </label>
+
                 <label>
-                  <span>Reason for Visit:</span>
-                  <div>
-                    <input type="radio" id="education" name="reason-for-visit" value="education">
-                    <label for="education">Education</label>
-                  </div>
-                  <div>
-                    <input type="radio" id="research" name="reason-for-visit" value="research">
-                    <label for="research">Research</label>
-                  </div>
-                  <div>
-                    <input type="radio" id="leisure" name="reason-for-visit" value="leisure">
-                    <label for="leisure">Leisure</label>
-                  </div>
+                  <span>Reason for Visit</span>
+                  <div class="radio-menus">
+                    <div>
+                      <input type="radio" id="education" name="reason-for-visit" value="education">
+                      <label for="education">Education</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="research" name="reason-for-visit" value="research">
+                      <label for="research">Research</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="leisure" name="reason-for-visit" value="leisure">
+                      <label for="leisure">Leisure</label>
+                    </div>
+                </div>
                 </label>
+
                 <label>
-                  <span>Additional Requests:</span>
+                  <span>Additional Requests</span>
                   <textarea id="additional-requests" name="additional-requests" rows="4" cols="50"></textarea>
                 </label>
-                <input type="submit" value="Submit">
+
+                <input type="submit" value="Submit" class="form-submit-btn">
               </form>
               
           </div>
