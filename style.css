@@ -3,6 +3,7 @@
 /* #region Universal Code */
 * {
     margin: 0;
+    /* color: #365332; */
     padding: 0;
     box-sizing: border-box;
     font-family: 'League Spartan', sans-serif;;
@@ -771,8 +772,7 @@ footer  {
 
 /* #region Gallery */
 #gallery .gallery {
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
   
   /* justify-content: center; */
   align-items: center;
@@ -780,8 +780,9 @@ footer  {
 }
 
 #gallery .gallery .col-gallery {
+  /* flex: 1 1 auto; */
   border: 1px solid black;
-  padding: 0.5em;
+  padding: 0.2em;
   
 }
 

@@ -53,3 +53,23 @@ submitButtons.forEach(function(button) {
   });
 });
 
+//date formatting
+
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const options = { month: 'long', day: 'numeric', year: 'numeric' };
+  const formattedDate = date.toLocaleDateString(undefined, options);
+  const day = formattedDate.slice(formattedDate.indexOf(' ') + 1, -6);
+  const suffix = getDaySuffix(day);
+  return formattedDate.replace(day, day + suffix);
+}
+
+function getDaySuffix(day) {
+  switch (day) {
+    case '1': case '21': case '31': return 'st';
+    case '2': case '22': return 'nd';
+    case '3': case '23': return 'rd';
+    default: return 'th';
+  }
+}
+
