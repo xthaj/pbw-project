@@ -1,7 +1,7 @@
 const posts = [
     {
         title: "My First Blog Post",
-        content:"Roxie C. Laybourne, whose scientific investigations into bird collisions with airplanes helped start forensic ornithology and enabled engineers to develop aircraft capable of withstanding such accidents, died on Aug. 7 at her farm in Manassas, Va. She was 92.\n\n\n\nIn 1960, when a plane crashed taking off from Logan Airport in Boston, killing all 62 people aboard, Ms. Laybourne, then a scientist at the Smithsonian's National Museum of Natural History, helped investigators conclude that the cause was a flock of starlings caught in one of its engines.\n\n\n\nHaving only charred remains to work with, she developed a novel way to remove oil and gasoline from bits of feathers while keeping them suitable for microscopic examination. Using a microscope, she could then pinpoint minute structural characteristics and identify the bird species or family based on the feathers.\n\n\n\nOver the next decades, Ms. Laybourne helped identify thousands of birds involved in collisions with commercial and military aircraft. Her work gave plane manufacturers information for designing engines that could continue to fly after ingesting the birds, and it helped ornithologists create bird management programs to prevent flocks from gathering near airports.",
+        content:"Roxie C. Laybourne, whose scientific investigations into bird collisions with airplanes helped start forensic ornithology and enabled engineers to develop aircraft capable of withstanding such accidents, died on Aug. 7 at her farm in Manassas, Va. She was 92. <br> In 1960, when a plane crashed taking off from Logan Airport in Boston, killing all 62 people aboard, Ms. Laybourne, then a scientist at the Smithsonian's National Museum of Natural History, helped investigators conclude that the cause was a flock of starlings caught in one of its engines.<br>Having only charred remains to work with, she developed a novel way to remove oil and gasoline from bits of feathers while keeping them suitable for microscopic examination. Using a microscope, she could then pinpoint minute structural characteristics and identify the bird species or family based on the feathers.\n\n\n\nOver the next decades, Ms. Laybourne helped identify thousands of birds involved in collisions with commercial and military aircraft. Her work gave plane manufacturers information for designing engines that could continue to fly after ingesting the birds, and it helped ornithologists create bird management programs to prevent flocks from gathering near airports.",
         date: new Date("2023-03-19"),
         image: "image/learn-1.png",
         url: "learn-samplepost.html"
@@ -90,47 +90,6 @@ function formatDate(dateString) {
     }
   }
 
-// function renderPosts() {
-//     const postContainer = document.querySelector('#post-container');
-//     const postTemplate = document.querySelector('#post-template');
-
-//     for (let i = 0; i < posts.length; i++) {
-//         const postClone = postTemplate.content.cloneNode(true);
-//         const postImage = postClone.querySelector('.post-image');
-//         const postTitle = postClone.querySelector('.post-title');
-//         const postDate = postClone.querySelector('.post-date');
-//         const postContent = postClone.querySelector('.post-content');
-//         const postLink = postClone.querySelector('.post-link');
-
-//         postImage.src = posts[i].image;
-//         postTitle.textContent = posts[i].title;
-//         postDate.textContent = formatDate(posts[i].date);
-//         postContent.textContent = posts[i].content;
-//         postLink.href = posts[i].url;
-
-//         postContainer.appendChild(postClone);
-//     }
-// }
-
-// function renderPost(id) {
-//     const postContainer = document.querySelector('#post-container');
-//     const postTemplate = document.querySelector('#post-template');
-
-//     const postClone = postTemplate.content.cloneNode(true);
-//     const postImage = postClone.querySelector('.post-image');
-//     const postTitle = postClone.querySelector('.post-title');
-//     const postDate = postClone.querySelector('.post-date');
-//     const postContent = postClone.querySelector('.post-content');
-//     // const postLink = postClone.querySelector('.post-link');
-    
-//     postImage.src = posts[id].image;
-//     postTitle.textContent = posts[id].title;
-//     postDate.textContent = formatDate(posts[id].date);
-//     postContent.textContent = posts[id].content;
-//     // postLink.href = posts[id].url;
-//     postContainer.appendChild(postClone);
-// }
-
 function renderPosts() {
     const postContainer = document.querySelector('#post-container');
     const postTemplate = document.querySelector('#post-template');
@@ -148,7 +107,7 @@ function renderPosts() {
       postImage.src = posts[i].image;
       postTitle.textContent = posts[i].title;
       postDate.textContent = formatDate(posts[i].date);
-      postContent.textContent = posts[i].content.substring(0, 150) + "...";
+      postContent.innerHTML = posts[i].content.substring(0, 150) + "...";
       postLink.href = "#";
       postLink.addEventListener('click', function() {
         renderPost(i);
@@ -166,19 +125,20 @@ function renderPosts() {
     postContainer.innerHTML = "";
   
     const postClone = postTemplate.content.cloneNode(true);
+    // const pageTitle = postClone.querySelector('.title');
     const post = postClone.querySelector('.post');
     const postImage = postClone.querySelector('.post-image');
     const postTitle = postClone.querySelector('.post-title');
     const postDate = postClone.querySelector('.post-date');
     const postContent = postClone.querySelector('.post-content');
     const postLink = postClone.querySelector('.post-link');
-    
+    // postClone.removeChild(pageTitle);
     postImage.src = posts[id].image;
     postTitle.textContent = posts[id].title;
     postDate.textContent = formatDate(posts[id].date);
-    postContent.textContent = posts[id].content;
+    postContent.innerHTML = posts[id].content;
 
-    postLink.textContent = "Back to Learn"; // Change the text of the link
+    postLink.textContent = "Back to Learn";
     postLink.addEventListener('click', function() {
       location.reload(); // Reload the page
     });
@@ -188,7 +148,9 @@ function renderPosts() {
     postTitle.classList.add('blogposts-changegreen');
     postDate.classList.add('blogposts-changegreen');
     postContent.classList.add('blogposts-changegreen');
-    postContent.classList.add('blogposts-changegreen');
+    
+    postContent.style.textAlign = 'justify';
+    // postContent.style.width = "50%";
 
     post.classList.add('blogposts-changepost');
     postContainer.appendChild(postClone);

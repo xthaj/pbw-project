@@ -10,8 +10,8 @@
 
     </head>
 
-    <body>
-            <header>
+    <body id="gallery">
+      <header>
                 <div class="logo">
                     <img src="image/logo.png" alt="logo">
                 </div>
@@ -30,9 +30,9 @@
                         </a>
                     </li>
                 </ul> 
-            </header>
+      </header>
 
-            <nav>
+      <nav>
                 <div class="container"> 
                     <!-- search bar -->
                     <form class="search-bar" action="search-action_page.php">
@@ -87,11 +87,80 @@
                     </nav>
                   </div>
                 </div>
-            </nav>
+      </nav>
             
-            
+      <main>
+        <h1 class="title">Gallery</h1>
 
-        <script src="script-home.js"></script>
+        <div class="gallery">
+          <div class="col-gallery" id="choose-art">
+            <p>Art & Design<br>Museum</p>
+          </div>
+          <div class="col-gallery" id="choose-history">
+            <p>History & Culture<br>Museum</p>
+          </div>
+          <div class="col-gallery" id="choose-science">
+            <p>Science & Conservation<br>Museum</p>
+          </div>
+        </div>
+
+<!-- JavaScript code for the product data and filtering functionality -->
+<script>
+  // Define the product data as an array of objects
+  const products = [
+    { name: 'Product 1', description: 'Description 1', location: 'Museum 1', date: 'Date 1' },
+    { name: 'Product 2', description: 'Description 2', location: 'Museum 2', date: 'Date 2' },
+    { name: 'Product 3', description: 'Description 3', location: 'Museum 3', date: 'Date 3' },
+    // Add more products as needed
+  ];
+
+  // Function to generate the product cards
+  function generateCards(museumId) {
+    // Get the museum column element
+    const museum = document.getElementById(museumId);
+    // Filter the products by the selected museum
+    const museumProducts = products.filter(product => product.location === museumId);
+    // Generate a card element for each product
+    museumProducts.forEach(product => {
+      const card = document.createElement('div');
+      card.classList.add('card');
+      card.setAttribute('data-name', product.name);
+      card.setAttribute('data-description', product.description);
+      card.setAttribute('data-location', product.location);
+      card.setAttribute('data-date', product.date);
+      // Add the card content here
+      museum.appendChild(card);
+    });
+  }
+
+  // Generate the cards for each museum
+  generateCards('museum1');
+  generateCards('museum2');
+  generateCards('museum3');
+
+  // Function to filter the cards based on the selected museum
+  function filterCards(museumId) {
+    // Get all the cards in the gallery
+    const cards = document.querySelectorAll('.card');
+    // Show the cards that belong to the selected museum and hide the others
+    cards.forEach(card => {
+      if (card.getAttribute('data-location') === museumId) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Add a click event listener to each museum column to filter the cards
+  document.getElementById('museum1').addEventListener('click', () => filterCards('museum1'));
+  document.getElementById('museum2').addEventListener('click', () => filterCards('museum2'));
+  document.getElementById('museum3').addEventListener('click', () => filterCards('museum3'));
+</script>
+
+      </main>     
+
+      <script src="script-home.js"></script>
         
     </body>
 </html>
