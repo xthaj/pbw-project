@@ -3,7 +3,6 @@
 /* #region Universal Code */
 * {
     margin: 0;
-    /* color: #365332; */
     padding: 0;
     box-sizing: border-box;
     font-family: 'League Spartan', sans-serif;;
@@ -30,6 +29,10 @@ button {
   color: var(--green-color);
 }
 
+.rounded-button {
+  border-radius: 6px;
+
+}
 button:hover {
   background: #6BC7A1 ;
 }
@@ -50,6 +53,27 @@ h2 {
   text-align: center;
   padding-top: 1em;
   color: var(--green-color);
+}
+
+/* link hovering underline */
+a {
+  position: relative;
+}
+
+a::after {
+  content: '';
+  display: block;
+  height: 2px; /* set the height of the underline */
+  width: 0;
+  background-color: var(--lightorange-color); /* set the color of the underline */
+  position: absolute; /* position the underline at the bottom of the anchor element */
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+a:hover::after {
+  width: 100%;
 }
 
 /* #endregion  */
@@ -370,10 +394,6 @@ footer  {
   text-decoration: none;
 }
 
-.footer-col a:hover {
-  text-decoration: underline;
-}
-
 .footer-logo {
   display: flex;
   justify-content: center;
@@ -670,8 +690,8 @@ footer  {
   /* margin-bottom: 1em; */
 }
 
-#visit-form label,
-#support-form label {
+#visit-form .form-item,
+#support-form .form-item {
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
@@ -679,8 +699,8 @@ footer  {
   max-width: 500px;
 }
 
-#visit-form label span,
-#support-form label span {
+#visit-form .form-item span,
+#support-form .form-item span {
   margin-bottom: 10px;
   font-size: 1.2em;
   font-weight: bold;
@@ -720,6 +740,10 @@ footer  {
   cursor: pointer;
 }
 
+.form-submit-btn:hover {
+  background-color: var(--lightgreen-color);
+}
+
 #visit-form .radio-menus input[type="radio"],
 #support-form .radio-menus input[type="radio"] {
   display: none;
@@ -736,6 +760,9 @@ footer  {
   border: 1px solid var(--green-color);
   border-radius: 5px;
   cursor: pointer;
+  
+  width: 100%;
+  max-width: 500px;
 }
 
 #visit-form .radio-menus input[type="radio"]:checked + label,
@@ -748,6 +775,7 @@ footer  {
 #support-form .radio-menus div:last-child label {
   display: flex;
   flex-direction: row;
+  /* padding: 10px; */
   /* align-items: center; */
 }
 
@@ -755,10 +783,13 @@ footer  {
   font-style: italic;
   color: var(--green-color);
   padding-bottom: 10px;
+
 }
 
 #support-form .checkbox-label div {
-  display: flex;
+  width: 100%;
+  max-width: 500px;
+  padding: 5px 0;
 }
 
 /* #support-form .radio-menus input[type="file"] {
@@ -770,6 +801,140 @@ footer  {
 
 /* #endregion */
 
+/* #region My Visits, Given Support */
+#account-page {
+  background-color: var(--cream-color);
+  display: flex;
+}
+
+#account-page .account-attributes {
+  overflow-y: scroll;
+}
+
+#account-page .greetings {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: var(--lightorange-color);
+
+}
+
+#account-page form label {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+#account-page .account-profile {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--green-color);
+  width: 40%;
+  max-width: 300px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--cream-color);
+
+  color: var(--cream-color);
+}
+
+.profile-image img {
+  max-width: 300px;
+  width: 75%;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+#account-page form div input[type="file"] {
+   /* margin-left: 7em; idk why it centering doesnt work? room for repair? */
+   margin: 5px 0 0 7em;
+}
+
+#account-page button {
+  width: 30%;
+  height: 2em;
+}
+
+#account-page ul {
+  list-style-type: none;
+  /* padding: 5px; */
+}
+
+#account-page ul li a {
+  text-decoration: none;
+  color: var(--cream-color);
+  font-family: var(--secondary-font);
+}
+
+#account-page ul li {
+  margin: 10px;
+}
+
+#account-page .container {
+  padding: 20px;
+  overflow-x: scroll;
+}
+
+#account-page table {
+  border: 1px solid var(--green-color);
+  
+}
+#account-page table, 
+#account-page th, 
+#account-page td {
+  color: var(--green-color);
+  border-collapse: collapse;
+  border-top: 1px solid var(--green-color);
+  border-bottom: 1px solid var(--green-color);
+}
+
+#account-page th {
+  background-color: var(--green-color);
+  color: var(--cream-color);
+  border-top: 1px solid var(--cream-color);
+  border-bottom: 1px solid var(--cream-color);
+  /* border-spacing: 0; */
+}
+
+#account-page th, 
+#account-page td {
+  padding: 5px;
+  text-align: center;
+}
+
+#visitorTable tbody tr:nth-child(odd), 
+#supportTable tbody tr:nth-child(odd) {
+  background-color:#fffffa;
+}
+
+#account-page tbody a {
+  text-decoration: none;
+  color: var(--green-color);
+}
+
+#account-page tbody a:hover{
+  color: var(--lightgreen-color);
+}
+
+@media(max-width:500px) {
+  #account-page {
+    display: block;
+  }
+
+  #account-page .account-profile {
+    width: 100%;
+    max-width: none;
+    /* border: none; */
+  }
+
+  #account-page .container {
+    padding: 0;
+    margin: 20px 0;
+  }
+}
+
+/* #endregion my visits */
+
 /* #region Gallery */
 #gallery .gallery {
   display: flex;
@@ -778,6 +943,8 @@ footer  {
   align-items: center;
   padding: 1em;
 }
+
+
 
 #gallery .gallery .col-gallery {
   /* flex: 1 1 auto; */
@@ -791,5 +958,11 @@ footer  {
   font-family: var(--secondary-font);
   text-align: center;
 }
+
+#collection-container {
+  display: flex;
+}
 /* #endregion gallery */
+
+
 heup!

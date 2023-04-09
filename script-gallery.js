@@ -91,18 +91,10 @@ function renderGallery() {
       const collectionClone = collectionTemplate.content.cloneNode(true);
       const collectionImage = collectionClone.querySelector('.collection-image');
       const collectionName = collectionClone.querySelector('.collection-name');
-      const collectionDescription = collectionClone.querySelector('.collection-description');
-      const collectionLocation = collectionClone.querySelector('.collection-location');
-      const collectionDate = collectionClone.querySelector('.collection-date');
-      collectionDescription.innerHTML = "<pre>" + collections[i].description + "</pre>";
-
       const collectionLink = collectionClone.querySelector('.collection-link');
   
       collectionImage.src = collections[i].image;
       collectionName.textContent = collections[i].name;
-      collectionDescription.innerHTML = collections[i].description.substring(0, 150) + "...";
-      collectionLocation.textContent = collections[i].location;
-      collectionDate.textContent = formatDate(collections[i].date);
       collectionLink.href = "#";
       collectionLink.addEventListener('click', function() {
         renderGalleryCollection(i);

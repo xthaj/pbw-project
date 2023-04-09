@@ -94,34 +94,34 @@
 
                 <div id="support-form">
                   <form>
-                    <label>
+                    <div class="form-item">
                       <span>Name</span>
                       <input type="text" id="name" name="name">
-                    </label>
+                    </div>
                     
-                    <label>
+                    <div class="form-item">
                       <span>Email</span>
                       <input type="email" id="email" name="email">
-                    </label>
+                    </div>
                     
-                    <label>
+                    <div class="form-item">
                       <span>Phone</span>
                       <input type="tel" id="phone" name="phone">
-                    </label>
+                    </div>
                     
-                    <label>
+                    <div class="form-item">
                       <span>Donation Amount</span>
                         <div class="radio-menus">
                           <div>
-                            <input type="radio" id="donation-25" name="donation_amount" value="25">
+                            <input type="radio" id="donation-25" name="donation_amount" value="25000">
                             <label for="donation-25">Rp25,000</label>
                           </div>
                           <div>
-                            <input type="radio" id="donation-50" name="donation_amount" value="50">
+                            <input type="radio" id="donation-50" name="donation_amount" value="50000">
                             <label for="donation-50">Rp50,000</label>
                           </div>
                           <div>
-                            <input type="radio" id="donation-100" name="donation_amount" value="100">
+                            <input type="radio" id="donation-100" name="donation_amount" value="100000">
                             <label for="donation-100">Rp100,000</label>
                           </div>
                           <div>
@@ -129,9 +129,9 @@
                             <label for="donation-other">Rp<input type="text" name="other_amount"></label>
                           </div>
                         </div>
-                    </label>
+                    </div>
                 
-                    <label>
+                    <div class="form-item">
                       <span>Donation Method</span>
                       <select id="donation-method" name="donation_method">
                         <option value="" disabled selected></option>
@@ -139,32 +139,32 @@
                         <option value="QRIS">QRIS</option>
                         <option value="supermarket">Alfamart/Indomart/Alfamidi</option>
                       </select>
-                    </label>
+                    </div>
                 
                 
-                    <label>
+                    <div class="form-item">
                       <span>Proof of Donation</span>
                       <input type="file" id="proof" name="proof">
-                    </label>
+                    </div>
 
-                    <label class="checkbox-label">
+                    <div class="checkbox-label form-item">
                       <span for="preference">Preference</span>
                       <p>I want my money to be used for...</p>
                       <div>
-                        <label for="new-collections">Exhibits Preservation</label>
                         <input type="checkbox" id="preserve" name="preserve" value="false">
+                        <label for="new-collections">Exhibits Preservation</label>
                       </div>
 
                       <div>
-                        <label for="projects">Fund Our Projects</label>
                         <input type="checkbox" id="projects" name="projects" value="false">
+                        <label for="projects">Fund Our Projects</label>
                       </div>
 
                       <div>
-                        <label for="projects">Exhibits Acquirements</label>
                         <input type="checkbox" id="acquire" name="acquire" value="false">
+                        <label for="projects">Exhibits Acquirements</label>
                       </div>
-                    </label>
+                    </div>
                 
                     <input type="submit" value="Submit Donation" class="form-submit-btn">
                   </form>

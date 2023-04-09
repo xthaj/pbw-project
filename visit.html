@@ -89,28 +89,29 @@
                 </div>
             </nav>
 
+            <main>
             <h1 class="title">Visit Us!</h1>
             
             <p>Please fill out the form below to request a visit to our museum.</p>
             
             <div id="visit-form">
               <form>
-                <label>
+                <div class="form-item">
                   <span>Name</span>
                   <input type="text" id="name" name="name">
-                </label>
+                </div>
 
-                <label>
+                <div class="form-item">
                   <span>Email</span>
                   <input type="email" id="email" name="email">
-                </label>
+                </div>
 
-                <label>
+                <div class="form-item">
                   <span>Phone</span>
                   <input type="tel" id="phone" name="phone">
-                </label>
+                </div>
 
-                <label>
+                <div class="form-item">
                   <span>Destination</span>
                   <select id="destination" name="destination">
                     <option value="" disabled selected></option>
@@ -118,24 +119,24 @@
                     <option value="history">History & Culture Museum</option>
                     <option value="science">Science & Conservation Museum</option>
                   </select>
-                </label>
+                </div>
 
-                <label>
+                <div class="form-item">
                   <span>Visit Date</span>
                   <input type="date" id="visit-date" name="visit-date">
-                </label>
+                </div>
 
-                <label>
+                <div class="form-item">
                   <span>Visit Time</span>
                   <input type="time" id="appt" name="appt">
-                </label>
+                </div>
 
-                <label>
+                <div class="form-item">
                   <span>Group Size</span>
                   <input type="number" id="group-size" name="group-size" min="1" max="20">
-                </label>
+                </div>
 
-                <label>
+                <div class="form-item">
                   <span>Reason for Visit</span>
                   <div class="radio-menus">
                     <div>
@@ -151,17 +152,19 @@
                       <label for="leisure">Leisure</label>
                     </div>
                 </div>
-                </label>
+                </div>
 
-                <label>
+                <div class="form-item">
                   <span>Additional Requests</span>
                   <textarea id="additional-requests" name="additional-requests" rows="4" cols="50"></textarea>
-                </label>
+                </div>
 
                 <input type="submit" value="Submit" class="form-submit-btn">
               </form>
-              
             </div>
+
+            
+            </main>
 
             <footer>
               <div class="footer-wrap">
