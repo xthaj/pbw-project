@@ -113,7 +113,7 @@
 
           <div class="account-attributes">
             <div class="attribute-visit">
-              <h1 class="title">My Visits</h1>
+              <h1 class="title">Bookmarked</h1>
 
               <div class="search-bar-container">
                 <form class="search-bar" action="search-action_page.php">
@@ -124,29 +124,30 @@
                 </form>
               </div>
 
-              <div class="container vertical-scroll">
-                <table id="visitorTable">
-                  <thead>
-                    <tr>
-                      <th>Contact Person</th>
-                      <th>Destination</th>
-                      <th>Visit Date</th>
-                      <th>Visit Time</th>
-                      <th>Group Size</th>
-                      <th>Reason for Visit</th>
-                      <th>Additional Requests</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- Visitor information will be inserted here -->
-                  </tbody>
-                </table>
+              <div id="collections">
+                <div id="collection-container" class="vertical-scroll">
+                  <template id="collection-template">
+                      <div class="collection">
+                        <div class="collection-image-container">
+                          <img class="collection-image">
+                          <!-- <button class="bookmark-button"><i class="fa-solid fa-bookmark"></i></button> -->
+                        </div>
+      
+                          <div class="collection-details">
+                              <h2 class="collection-name"></h2>
+                              <p class="collection-description justify"></p>
+                              <p class="collection-location"></p>
+                              <p class="collection-date"></p>
+                              <a class="collection-link change-lightgreen">More Information</a>
+                          </div>
+                      </div>
+                  </template>
+                </div>
+              </div>
 
               </div>
             </div>
 
-
-          </div>
         </main>
         
         <footer>
@@ -178,7 +179,8 @@
         </footer>
 
         <script src="script-home.js"></script>
-        <script> window.onload = displayVisitors;</script>
+        <script src="script-gallery.js"></script>
+        <script> renderGallery(); </script>
         
     </body>
 </html>

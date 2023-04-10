@@ -95,44 +95,72 @@
         <div class="gallery-navigator">
           <div class="gallery-table">
             <div class="col-gallery" id="choose-art">
-              <a href="#art-section">Art & Design Museum</a>
+              <a href="" class="filter">Art & Design Museum</a>
             </div>
 
             <div class="col-gallery" id="choose-history">
-              <a href="#history-section">History & Culture Museum</a>
+              <a href="#" class="filter">History & Culture Museum</a>
             </div>
 
             <div class="col-gallery" id="choose-science">
-              <a href="#sci-section">Science & Conservation Museum</a>
+              <a href="#" class="filter">Science & Conservation Museum</a>
             </div>
           </div>
 
-          <p>See All</p>
+          <a class="gallery-all" href="">See All</a>
         </div>
         
-        <p class="subtitle">Art & Design Museum</p>
-        <section id="collections">
-          <div id="collection-container">
-          <template id="collection-template">
-              <div class="collection">
-                <div class="collection-image-container">
-                  <img class="collection-image" />
-                  <button class="bookmark-button"><i class="fa-solid fa-bookmark"></i></button>
-                </div>
+        <h2 class="title">All Collections</h2>
 
-                  <div class="collection-details">
-                      <h2 class="collection-name"></h2>
-                      <p class="collection-description"></p>
-                      <p class="collection-location"></p>
-                      <p class="collection-date"></p>
-                      <a class="collection-link">More Information</a>
+        <div id="collections">
+          <div id="collection-container" class="vertical-scroll">
+            <template id="collection-template">
+                <div class="collection">
+                  <div class="collection-image-container">
+                    <img class="collection-image">
+                    <button class="bookmark-button"><i class="fa-solid fa-bookmark"></i></button>
                   </div>
-              </div>
-            </template>
-            </div>
-        </section>
 
+                    <div class="collection-details">
+                        <h2 class="collection-name"></h2>
+                        <p class="collection-description justify"></p>
+                        <p class="collection-location"></p>
+                        <p class="collection-date"></p>
+                        <a class="collection-link change-lightgreen">More Information</a>
+                    </div>
+                </div>
+            </template>
+          </div>
+        </div>
       </main>     
+
+      <footer>
+        <div class="footer-wrap">
+          <div class="footer-logo">
+            <a href="https://github.com/xthaj" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+
+          <div class="footer-col">
+            <p>About the website</p>
+            <ul>
+              <li><a href="https://www.si.edu" target="_blank">Reference and Sources</a></li>
+              <li><a href="https://docs.google.com/document/d/1uS482CSX6L9nysM13FL_yskhoIGfC5mF2-P07MzQL2o/edit?usp=sharing" target="_blank">Other Attributions</a></li>
+              <li><a href="https://youtube.com/playlist?list=PLl2VaUX1bspnsR8EGU1zAyygDsSYrH8P2" target="_blank" rel="noopener noreferrer">Tutorials Followed</a></li>
+              <li><a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Important</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <p>For & By</p>
+            <ul>
+              <li>PBW Project 2023</li>
+              <li>Atha Juli R</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
 
       <script src="script-gallery.js"></script>
       <script src="script-home.js"></script>

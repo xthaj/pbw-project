@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -91,11 +91,11 @@
         <main>
           <h1 class="title">Learn</h1>
           
-          <section id="posts">
+        <div id="posts">
               <div id="post-container"></div>
               <template id="post-template">
                   <div class="post">
-                      <img class="post-image" />
+                      <img class="post-image">
                       <div class="post-details">
                           <h2 class="post-title"></h2>
                           <p class="post-date"></p>
@@ -104,7 +104,7 @@
                       </div>
                   </div>
               </template>
-          </section>
+            </div>
         </main>
         
         <footer>
@@ -135,7 +135,6 @@
           </div>
         </footer>
 
-        <script src="script-blogposts.js"></script>
         <script src="script-home.js"></script>
         <script> window.onload = renderPosts;</script>
         

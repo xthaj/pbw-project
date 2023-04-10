@@ -1,3 +1,18 @@
+const filters = document.querySelectorAll('.filter');
+filters.forEach(filter => {
+  filter.addEventListener('click', () => {
+    alert('Filter function has not been deployed yet');
+  });
+});
+
+const bookmarkButtons = document.querySelectorAll('.bookmark-button');
+bookmarkButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    alert('Item has been added to bookmarks (not really)');
+  });
+});
+
+
 const collections = [
     {
         id: 1,
@@ -20,7 +35,7 @@ const collections = [
     {
         id: 3,
         name: '“Cape Cod Morning” by Edward Hopper', 
-        description: 'In Cape Cod Morning, a woman looks out a bay window, riveted by something beyond the pictorial space. She is framed by tall, dark shutters and the shaded façade of the oriel window. The brilliant sunlight on the side of the house contrasts with the blue sky, trees, and golden grass that fill the right half of the canvas. The painting tells no story; instead, the woman/’s tense pose creates a sense of anxious anticipation, and the bifurcated image implies a dichotomy between her interior space and the world beyond.',
+        description: 'In Cape Cod Morning, a woman looks out a bay window, riveted by something beyond the pictorial space. She is framed by tall, dark shutters and the shaded façade of the oriel window. The brilliant sunlight on the side of the house contrasts with the blue sky, trees, and golden grass that fill the right half of the canvas. The painting tells no story; instead, the woman\'s tense pose creates a sense of anxious anticipation, and the bifurcated image implies a dichotomy between her interior space and the world beyond.',
         location: 'Art & Design Museum', 
         date: new Date("2023-03-19"),
         image: "image/gallery-3-capecod.jpg",
@@ -52,7 +67,7 @@ const collections = [
     {
         id: 7,
         name: 'Hope Fire Company Fire Hat', 
-        description: 'Beginning in the late 18th century, some volunteer fire fighters began to wear hats painted with their company/’s name to identify themselves at chaotic fire scenes. During the 19th century, these fire hats became more ornate, as portraits of historical figures, patriotic scenes, allegorical images, or company icons were painted alongside the company/’s name, motto, or founding date. Made of pressed felt, these “stove-pipe” hats were primarily used in Philadelphia, but other nearby cities such as Baltimore and Washington adopted them as well. Fire hats were personal items with the owner/’s initials often painted on the top of the hat. While these hats were worn at fires, they are more colloquially known as “parade hats.” Fire companies commonly marched in the many parades of the period and these ornate hats contributed to the visual culture of their day. These distinguishing features in a company/’s regalia often proclaimed the members/’ cultural and political identity as well as their position on contested topics such as work, religion and immigration.',
+        description: 'Beginning in the late 18th century, some volunteer fire fighters began to wear hats painted with their company\'s name to identify themselves at chaotic fire scenes. During the 19th century, these fire hats became more ornate, as portraits of historical figures, patriotic scenes, allegorical images, or company icons were painted alongside the company\'s name, motto, or founding date. Made of pressed felt, these “stove-pipe” hats were primarily used in Philadelphia, but other nearby cities such as Baltimore and Washington adopted them as well. Fire hats were personal items with the owner\'s initials often painted on the top of the hat. While these hats were worn at fires, they are more colloquially known as “parade hats.” Fire companies commonly marched in the many parades of the period and these ornate hats contributed to the visual culture of their day. These distinguishing features in a company\'s regalia often proclaimed the members\' cultural and political identity as well as their position on contested topics such as work, religion and immigration.',
         location: 'History & Culture Museum', 
         date: new Date("2023-03-19"),
         image: "image/gallery-7-hat.jpg",
@@ -60,7 +75,7 @@ const collections = [
     {
         id: 8,
         name: 'Kermit the Frog Puppet', 
-        description: 'Kermit is a bright green frog who was the star and host of The Muppet Show and appears on Sesame Street. He is one of Jim Henson/’s earliest creations, dating back to 1955 with his appearances on Sam and Friends on the Washington, D.C., NBC affiliate station. He was previously performed by Jim Henson and Steve Whitmire and is currently performed by Matt Vogel. Kermit is a calm, level-headed character who is constantly trying to keep everything together as he is surrounded by craziness. Kermit is known for singing “Bein/’ Green” (also known as “It/’s Not Easy Bein/’ Green”) which talks about the difficulties he has had because of his color but ends with him accepting and embracing his greenness.',
+        description: 'Kermit is a bright green frog who was the star and host of The Muppet Show and appears on Sesame Street. He is one of Jim Henson\'s earliest creations, dating back to 1955 with his appearances on Sam and Friends on the Washington, D.C., NBC affiliate station. He was previously performed by Jim Henson and Steve Whitmire and is currently performed by Matt Vogel. Kermit is a calm, level-headed character who is constantly trying to keep everything together as he is surrounded by craziness. Kermit is known for singing “Bein\' Green” (also known as “It\'s Not Easy Bein\' Green”) which talks about the difficulties he has had because of his color but ends with him accepting and embracing his greenness.',
         location: 'History & Culture Museum', 
         date: new Date("2023-03-19"),
         image: "image/gallery-8-kermit.jpg",
@@ -68,7 +83,7 @@ const collections = [
     {
         id: 9,
         name: 'Ferrel Tide Predictor', 
-        description: 'In 1872, the British physicist William Thomson (later Lord Kelvin) devised a machine to simulate mechanically the combination of periodic motions that produce tides. Inspired by this example, William Ferrel of the U.S. Coast and Geodetic Survey designed a tide predictor and had it built by the Washington, D.C., firm of Fauth and Company. This elegant machine was more compact than that of Thomson, and gave maxima and minima rather than a continuous curve as output. It was designed in 1880, went into service in 1883 and remained in use until 1910. The success of Ferrel/’s tide predictor suggested the feasibility of replacing calculations performed by people with computation by machines.',
+        description: 'In 1872, the British physicist William Thomson (later Lord Kelvin) devised a machine to simulate mechanically the combination of periodic motions that produce tides. Inspired by this example, William Ferrel of the U.S. Coast and Geodetic Survey designed a tide predictor and had it built by the Washington, D.C., firm of Fauth and Company. This elegant machine was more compact than that of Thomson, and gave maxima and minima rather than a continuous curve as output. It was designed in 1880, went into service in 1883 and remained in use until 1910. The success of Ferrel\'s tide predictor suggested the feasibility of replacing calculations performed by people with computation by machines.',
         location: 'Science & Conservation Museum', 
         date: new Date("2023-03-19"),
         image: "image/gallery-9-ferrel-tide.jpg",
@@ -87,21 +102,21 @@ function renderGallery() {
     const collectionContainer = document.querySelector('#collection-container');
     const collectionTemplate = document.querySelector('#collection-template');
   
-    for (let i = 0; i < collections.length; i++) {
-      const collectionClone = collectionTemplate.content.cloneNode(true);
-      const collectionImage = collectionClone.querySelector('.collection-image');
-      const collectionName = collectionClone.querySelector('.collection-name');
-      const collectionLink = collectionClone.querySelector('.collection-link');
+      for (let i = 0; i < collections.length; i++) {
+        const collectionClone = collectionTemplate.content.cloneNode(true);
+        const collectionImage = collectionClone.querySelector('.collection-image');
+        const collectionName = collectionClone.querySelector('.collection-name');
+        const collectionLink = collectionClone.querySelector('.collection-link');
   
-      collectionImage.src = collections[i].image;
-      collectionName.textContent = collections[i].name;
-      collectionLink.href = "#";
-      collectionLink.addEventListener('click', function() {
-        renderGalleryCollection(i);
-      });
+        collectionImage.src = collections[i].image;
+        collectionName.textContent = collections[i].name;
+        collectionLink.href = "#"; 
+        collectionLink.addEventListener('click', function() {
+          renderGalleryCollection(i);
+        });
   
-      collectionContainer.appendChild(collectionClone);
-    }
+        collectionContainer.appendChild(collectionClone);
+      }
   }
   
   function renderGalleryCollection(id) {
@@ -113,7 +128,7 @@ function renderGallery() {
 
     // const pageTitle = postClone.querySelector('.title');
     const collectionClone = collectionTemplate.content.cloneNode(true);
-        const collection = collectionClone.querySelector('.collection');
+    const collection = collectionClone.querySelector('.collection');
       const collectionImage = collectionClone.querySelector('.collection-image');
       const collectionName = collectionClone.querySelector('.collection-name');
       const collectionDescription = collectionClone.querySelector('.collection-description');
@@ -127,25 +142,22 @@ function renderGallery() {
     // postClone.removeChild(pageTitle);
     collectionImage.src = collections[id].image;
     collectionName.textContent = collections[id].name;
-    collectionDescription.innerHTML = collections[id].description.substring(0, 150) + "...";
-    collectionLocation.textContent = collections[id].location;
-    collectionDate.textContent = formatDate(collections[id].date);
+    collectionDescription.innerHTML = '<h2 class="subtitle">Description</h2>' + collections[id].description;
+    collectionLocation.innerHTML = '<h2 class="subtitle">Location</h2>' + collections[id].location;
+    collectionDate.innerHTML = '<h2 class="subtitle">Date Acquired</h2>' + formatDate(collections[id].date);
     collectionLink.href = "#";
+    collectionLink.textContent = "Back to Gallery";
 
-    collectionLink.textContent = "Back to Learn";
+    collection.classList.remove('collection');
+    collection.classList.add('collection-single');
+    
+    collectionImage.classList.remove('collection-image');
+    collectionImage.classList.add('collection-singleimage');
+
+    collectionContainer.classList.add('singlecollection-container');
+    
     collectionLink.addEventListener('click', function() {
       location.reload(); // Reload the page
     });
-
-    // postLink.classList.add('blogposts-back-to-learn');
-    // postLink.classList.add('blogposts-changelightgreen');
-    // postTitle.classList.add('blogposts-changegreen');
-    // postDate.classList.add('blogposts-changegreen');
-    // postContent.classList.add('blogposts-changegreen');
-    
-    // postContent.style.textAlign = 'justify';
-    // postContent.style.width = "50%";
-
-    // post.classList.add('blogposts-changepost');
     collectionContainer.appendChild(collectionClone);
 }

@@ -111,30 +111,27 @@
                     
                     <div class="form-item">
                       <span>Donation Amount</span>
-                        <div class="radio-menus">
-                          <div>
-                            <input type="radio" id="donation-25" name="donation_amount" value="25000">
-                            <label for="donation-25">Rp25,000</label>
-                          </div>
-                          <div>
-                            <input type="radio" id="donation-50" name="donation_amount" value="50000">
-                            <label for="donation-50">Rp50,000</label>
-                          </div>
-                          <div>
-                            <input type="radio" id="donation-100" name="donation_amount" value="100000">
-                            <label for="donation-100">Rp100,000</label>
-                          </div>
-                          <div>
-                            <input type="radio" id="donation-other" name="donation_amount" value="other">
-                            <label for="donation-other">Rp<input type="text" name="other_amount"></label>
-                          </div>
+                      <div class="radio-menus">
+                        <div>
+                          <input type="radio" id="donation-25" name="donation_amount" value="25000">
+                          <label for="donation-25">Rp25,000</label>
                         </div>
+                        <div>
+                          <input type="radio" id="donation-50" name="donation_amount" value="50000">
+                          <label for="donation-50">Rp50,000</label>
+                        </div>
+                        <div>
+                          <input type="radio" id="donation-100" name="donation_amount" value="100000">
+                          <label for="donation-100">Rp100,000</label>
+                        </div>
+                      </div>
+                      
                     </div>
                 
                     <div class="form-item">
                       <span>Donation Method</span>
                       <select id="donation-method" name="donation_method">
-                        <option value="" disabled selected></option>
+                        <option value="" disabled selected>---</option>
                         <option value="transfer_bank">Transfer Bank</option>
                         <option value="QRIS">QRIS</option>
                         <option value="supermarket">Alfamart/Indomart/Alfamidi</option>
@@ -148,11 +145,11 @@
                     </div>
 
                     <div class="checkbox-label form-item">
-                      <span for="preference">Preference</span>
+                      <span>Preference</span>
                       <p>I want my money to be used for...</p>
                       <div>
                         <input type="checkbox" id="preserve" name="preserve" value="false">
-                        <label for="new-collections">Exhibits Preservation</label>
+                        <label for="preserve">Exhibits Preservation</label>
                       </div>
 
                       <div>

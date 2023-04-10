@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -96,25 +96,36 @@
 
                 <p class="greetings">Hello, [username]!</p>
 
-                <form action="">
+                <form>
                   <div>
                     <label for="profile-picture">Change Profile Picture:</label>
                     <input type="file" id="profile-picture" name="profile-picture" accept="image/*">
                   </div>
-                    <button class="rounded-button" type="submit">Change</button>
+                    <button class="rounded-button change-photo-button" type="submit">Change</button>
                 </form>
 
                 <ul>
                     <li><a href="my-visits.html">My Visits</a></li>
                     <li><a href="given-support.html">Given Support</a></li>
-                    <li><a href="">Bookmarked Collections</a></li>
+                    <li><a href="bookmarked.html">Bookmarked Collections</a></li>
                 </ul>
             </div>
 
           <div class="account-attributes">
             <div class="attribute-support">
+
               <h1 class="title">Given Support</h1>
-              <div class="container">
+
+              <div class="search-bar-container">
+                <form class="search-bar" action="search-action_page.php">
+                  <input type="text" placeholder="Search Data" name="search">
+                  <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </form>
+              </div>
+
+              <div class="container vertical-scroll">
                     <table id="supportTable">
                         <thead>
                             <tr>
