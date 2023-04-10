@@ -92,19 +92,25 @@
       <main>
         <h1 class="title">Gallery</h1>
 
-        <div class="gallery">
-          <div class="col-gallery" id="choose-art">
-            <p>Art & Design<br>Museum</p>
+        <div class="gallery-navigator">
+          <div class="gallery-table">
+            <div class="col-gallery" id="choose-art">
+              <a href="#art-section">Art & Design Museum</a>
+            </div>
+
+            <div class="col-gallery" id="choose-history">
+              <a href="#history-section">History & Culture Museum</a>
+            </div>
+
+            <div class="col-gallery" id="choose-science">
+              <a href="#sci-section">Science & Conservation Museum</a>
+            </div>
           </div>
-          <div class="col-gallery" id="choose-history">
-            <p>History & Culture<br>Museum</p>
-          </div>
-          <div class="col-gallery" id="choose-science">
-            <p>Science & Conservation<br>Museum</p>
-          </div>
+
+          <p>See All</p>
         </div>
         
-        <p>Art & Design Museum</p>
+        <p class="subtitle">Art & Design Museum</p>
         <section id="collections">
           <div id="collection-container">
           <template id="collection-template">
@@ -120,7 +126,6 @@
                       <p class="collection-location"></p>
                       <p class="collection-date"></p>
                       <a class="collection-link">More Information</a>
-                      <!-- <button class="bookmark-btn"></button> -->
                   </div>
               </div>
             </template>
@@ -131,7 +136,7 @@
 
       <script src="script-gallery.js"></script>
       <script src="script-home.js"></script>
-      <script> window.onload = renderGallery;</script>
+      <script> renderGallery(); </script>
         
     </body>
 </html>
