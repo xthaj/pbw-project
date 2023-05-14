@@ -93,20 +93,20 @@
                 <p>Please fill out the form below to support Croak Culture financially.</p>
 
                 <div id="support-form">
-                  <form>
+                  <form onsubmit="return validateSupportForm()">
                     <div class="form-item">
                       <span>Name</span>
-                      <input type="text" id="name" name="name">
+                      <input type="text" id="name" name="name" required>
                     </div>
                     
                     <div class="form-item">
                       <span>Email</span>
-                      <input type="email" id="email" name="email">
+                      <input type="email" id="email" name="email" required>
                     </div>
                     
                     <div class="form-item">
                       <span>Phone</span>
-                      <input type="tel" id="phone" name="phone">
+                      <input type="tel" id="phone" name="phone" required>
                     </div>
                     
                     <div class="form-item">
@@ -130,7 +130,7 @@
                 
                     <div class="form-item">
                       <span>Donation Method</span>
-                      <select id="donation-method" name="donation_method">
+                      <select id="donation-method" name="donation_method" required>
                         <option value="" disabled selected>---</option>
                         <option value="transfer_bank">Transfer Bank</option>
                         <option value="QRIS">QRIS</option>
@@ -141,7 +141,7 @@
                 
                     <div class="form-item">
                       <span>Proof of Donation</span>
-                      <input type="file" id="proof" name="proof">
+                      <input type="file" id="proof" name="proof" required>
                     </div>
 
                     <div class="checkbox-label form-item">

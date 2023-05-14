@@ -94,21 +94,21 @@
             
             <p>Please fill out the form below to request a visit to our museum.</p>
             
-            <div id="visit-form">
-              <form>
+            <div id="visit-form" >
+              <form onsubmit="return validateVisitForm()" action="action_page.php" method="post">
                 <div class="form-item">
                   <span>Name</span>
-                  <input type="text" id="name" name="name">
+                  <input type="text" id="name" name="name" required>
                 </div>
 
                 <div class="form-item">
                   <span>Email</span>
-                  <input type="email" id="email" name="email">
+                  <input type="email" id="email" name="email" required>
                 </div>
 
                 <div class="form-item">
                   <span>Phone</span>
-                  <input type="tel" id="phone" name="phone">
+                  <input type="tel" id="phone" name="phone" required>
                 </div>
 
                 <div class="form-item">
@@ -128,7 +128,7 @@
 
                 <div class="form-item">
                   <span>Visit Time</span>
-                  <input type="time" id="appt" name="appt">
+                  <input type="time" id="visit-time" name="visit-time">
                 </div>
 
                 <div class="form-item">
@@ -192,7 +192,8 @@
               </div>
             </footer>
 
-        <script src="script-home.js"></script>
-        
+    <script src="script-home.js"></script>
+    <!-- <script>validateForm();</script> -->
+            
     </body>
 </html>

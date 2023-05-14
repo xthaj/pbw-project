@@ -601,12 +601,50 @@ footer  {
   pointer-events: all;
 }
 
-/* responsiveness */
-@media (max-width: 700px) {
+#login-page .account-text {
+  display: none;
+}
+
+@media (max-width: 1000px) {
   #login-page .container {
     width: 100vw;
     height: 100vh;
   }
+}
+
+@media (max-width: 480px ) {
+  #login-page .container::before {
+    display: none;
+  }
+
+  #login-page .container.sign-in-mode2 form.sign-in-form {
+    display: flex;
+    opacity: 1;
+  }
+
+  #login-page .container.sign-in-mode2 form.sign-up-form {
+    display: none;
+    opacity: 1;
+  }
+
+  #login-page form.sign-in-form {
+    display: none;
+  }
+
+  #login-page .panels-container {
+    display: none;
+  }
+
+  #login-page form {
+    width: 90% ;
+  }
+
+  #login-page .account-text {
+    display: initial;
+    margin-top: 1em;
+  }
+
+  
 }
 
 /* #endregion  */
@@ -1059,8 +1097,7 @@ footer  {
 }
 
 .collection-singleimage {
-  /* aspect-ratio: 4 / 3; */
-  max-height: 400px;
+  /* max-height: 400px; */
   width: 100%;
   object-fit: cover;
 }
@@ -1143,10 +1180,6 @@ button .fa-bookmark {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.search-bar {
-  /* height: 3em; */
 }
 
 /* #region main page  */

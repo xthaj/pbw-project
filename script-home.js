@@ -194,15 +194,12 @@ function displayVisitors() {
   // Clear existing rows from the table
   table.innerHTML = '';
 
-  // Loop through visitors array and add rows to the table
   for (var i = 0; i < visitors.length; i++) {
     var row = table.insertRow(i);
 
-    // Create cell for contact person
     var contactCell = row.insertCell(0);
     contactCell.innerHTML = visitors[i].name + '<br>' + visitors[i].phone + '<br>' + visitors[i].email;
 
-    // Create cells for other visitor information
     var destCell = row.insertCell(1);
     destCell.innerHTML = visitors[i].destination;
 
@@ -222,6 +219,78 @@ function displayVisitors() {
     requestCell.innerHTML = visitors[i].additionalRequests;
   }
 }
+
+function validateVisitForm() {
+ const name = document.getElementById('name').value.trim();
+ const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const destination = document.getElementById('destination').value;
+  const visitDate = document.getElementById('visit-date').value;
+  // const visitTime = document.getElementById('appt').value;
+   const groupSize = document.getElementById('group-size').value;
+  const reasonForVisit = document.querySelector('input[name="reason-for-visit"]:checked');
+  
+  // Check if required fields are filled out
+  if (!name || !email || !phone || !destination || !reasonForVisit) {
+    alert('Please fill out all required fields.');
+    return false;
+  }
+  
+  const mailRegex = /\S+@\S+\.\S+/;
+  if (!mailRegex.test(email)) {
+    alert('Please enter a valid email address.');
+    return false;
+  }
+  
+  const phoneRegex = /^\+?\d{10,15}$/; 
+  if (!phoneRegex.test(phone)) {
+    alert('Please enter a valid phone number.');
+    return false;
+  }
+
+  const today = new Date();
+  const selectedDate = new Date(visitDate);
+  const oneMonthFromNow = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
+  if (selectedDate < today || selectedDate > oneMonthFromNow) {
+    alert('Please select a date within the next month.');
+    return false;
+  }
+
+  if (groupSize < 1 || groupSize > 20) {
+    alert('Group size must be between 1 and 20.');
+    return false;
+  }
+
+  return true;
+}
+
+function validateSupportForm() {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const donationAmount = document.querySelector('input[name="donation_amount"]:checked');
+  const donationMethod = document.getElementById('donation-method').value;
+
+  if (!name || !email || !phone || !donationAmount || !donationMethod) {
+    alert('Please fill out all required fields.');
+    return false;
+  }
+
+  const emailRegex = /\S+@\S+\.\S+/;
+  if (!emailRegex.test(email)) {
+    alert('Please enter a valid email address.');
+    return false;
+  }
+
+  const phoneRegex = /^\+?\d{10,15}$/;
+  if (!phoneRegex.test(phone)) {
+    alert('Please enter a valid phone number.');
+    return false;
+  }
+
+  return true;
+}
+
 
 const posts = [
   {
@@ -656,6 +725,70 @@ function displaySupports() {
   }
 }
 
+function loginPage() {
+  const container = document.querySelector("#loginPageContainer");
+  
+  const signInButton = document.querySelector("#signInButton");
+  const signUpButton = document.querySelector("#signUpButton");
 
+  const signInButton2 = document.querySelector("#signInButton2");
+  const signUpButton2 = document.querySelector("#signUpButton2");
 
+  signInButton.addEventListener("click", () => {
+    container.classList.add("sign-in-mode");
+  });
 
+  signUpButton.addEventListener("click", () => {
+    container.classList.remove("sign-in-mode");
+  });
+
+  signInButton2.addEventListener("click", () => {
+    container.classList.add("sign-in-mode2");
+  });
+  
+  signUpButton2.addEventListener("click", () => {
+    container.classList.remove("sign-in-mode2");
+  });
+}
+
+function validateSignUpForm() {
+  const name = document.querySelector('input[name="txt"]').value.trim();
+  const email = document.querySelector('input[name="email"]').value.trim();
+  const password = document.querySelector('input[name="pswd"]').value.trim();
+
+  if (!name || !email || !password) {
+    alert('Please fill out all required fields.');
+    return false;
+  }
+
+  const mailRegex = /\S+@\S+\.\S+/;
+  if (!mailRegex.test(email)) {
+    alert('Please enter a valid email address.');
+    return false;
+  }
+
+  if (password.length < 6) {
+    alert('Password must be at least 6 characters long.');
+    return false;
+  }
+
+  return true;
+}
+
+function validateSignInForm() {
+  const email = document.querySelector('input[name="email"]').value.trim();
+  const password = document.querySelector('input[name="pswd"]').value.trim();
+
+  const mailRegex = /\S+@\S+\.\S+/;
+  if (!mailRegex.test(email)) {
+    alert('Email incorrect');
+    return false;
+  }
+
+  if (password.length < 6) {
+    alert('Password must be at least 6 characters long.');
+    return false;
+  }
+
+  return true;
+}
