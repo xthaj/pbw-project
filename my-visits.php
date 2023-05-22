@@ -128,6 +128,7 @@
                 <table id="visitorTable">
                   <thead>
                     <tr>
+                      <th>No.</th>
                       <th>Contact Person</th>
                       <th>Destination</th>
                       <th>Visit Date</th>
@@ -135,10 +136,44 @@
                       <th>Group Size</th>
                       <th>Reason for Visit</th>
                       <th>Additional Requests</th>
+                      <th>Edit | Delete</th>
                     </tr>
                   </thead>
                   <tbody>
                     <!-- Visitor information will be inserted here -->
+                    <?php
+                      require 'dbconn_fetch_visit.php';
+
+                      $i = 1;
+
+                      foreach ($rows as $value) {
+                        // if $value["destination"] == 
+
+                        echo "<tr>";
+                        echo "<td>", $i, "</td>";
+                        echo "<td>", $value["name"], "<br>", $value["email"], "<br>", $value["phone"], "</td>";
+                        echo "<td>";
+                        echo match($value["destination"]) {
+                          'art' => "Art & Design Museum",
+                          'science' => "Science & Conservation Museum",
+                          'history' => "History & Culture Museum",
+                        };
+                        echo "</td>";
+                        echo "<td>", $value["date"], "</td>";
+                        echo "<td>", $value["time"], "</td>";
+                        echo "<td>", $value["group_size"], "</td>";
+                        echo "<td>", $value["reason"], "</td>";
+                        echo "<td>", $value["additional_requests"], "</td>";
+                        echo 
+                          "<td>
+                          <a href='dbconn_edit_visit.php?name=",$value["name"],"'><img src='edit.png' style='width:30px;height:30px;'></a>
+                          <a href='php09G.php?slot=",$value["name"],"'><img src='remove.png' style='width:30px;height:30px;'></a>
+                          </td>";
+                        echo "</tr>";
+
+                        $i++;
+                      }
+                    ?>
                   </tbody>
                 </table>
 
@@ -178,7 +213,7 @@
         </footer>
 
         <script src="script-home.js"></script>
-        <script> window.onload = displayVisitors;</script>
+        <!-- <script> window.onload = displayVisitors;</script> -->
         
     </body>
 </html>

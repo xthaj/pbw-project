@@ -95,7 +95,7 @@
             <p>Please fill out the form below to request a visit to our museum.</p>
             
             <div id="visit-form" >
-              <form onsubmit="return validateVisitForm()" action="action_page.php" method="post">
+              <form onsubmit="return validateVisitForm()" action="dbconn_add_visit.php" method="post">
                 <div class="form-item">
                   <span>Name</span>
                   <input type="text" id="name" name="name" required>
@@ -123,32 +123,32 @@
 
                 <div class="form-item">
                   <span>Visit Date</span>
-                  <input type="date" id="visit-date" name="visit-date">
+                  <input type="date" id="visit-date" name="date">
                 </div>
 
                 <div class="form-item">
                   <span>Visit Time</span>
-                  <input type="time" id="visit-time" name="visit-time">
+                  <input type="time" id="visit-time" name="time">
                 </div>
 
                 <div class="form-item">
                   <span>Group Size</span>
-                  <input type="number" id="group-size" name="group-size" min="1" max="20">
+                  <input type="number" id="group-size" name="group_size" min="1" max="20">
                 </div>
 
                 <div class="form-item">
                   <span>Reason for Visit</span>
                   <div class="radio-menus">
                     <div>
-                      <input type="radio" id="education" name="reason-for-visit" value="education">
+                      <input type="radio" id="education" name="reason" value="education">
                       <label for="education">Education</label>
                     </div>
                     <div>
-                      <input type="radio" id="research" name="reason-for-visit" value="research">
+                      <input type="radio" id="research" name="reason" value="research">
                       <label for="research">Research</label>
                     </div>
                     <div>
-                      <input type="radio" id="leisure" name="reason-for-visit" value="leisure">
+                      <input type="radio" id="leisure" name="reason" value="leisure">
                       <label for="leisure">Leisure</label>
                     </div>
                 </div>

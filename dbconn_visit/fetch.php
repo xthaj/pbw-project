@@ -9,24 +9,30 @@
 
         $sql = "SELECT * FROM `visit_form`";
 
-        $result=$conn->query("$sql");
-        $result->setFetchMode(PDO::FETCH_ASSOC);
+        // $result=$conn->query("$sql");
+        // $result->setFetchMode(PDO::FETCH_ASSOC);
         // $row = $result->fetch();
         // $row = $result->fetchAll();
         // var_dump($row);
 
         //Cara 1
-        foreach($result as $value) {
-            echo "Name: ", $value["name"], "<br>\n";
-            echo "Email: ", $value["email"], "<br>\n";
-            echo "Phone: ", $value["phone"], "<br>\n";
-            echo "Destination: ", $value["destination"], "<br>\n";
-            echo "Date: ", $value["date"], "<br>\n";
-            echo "Time: ", $value["time"], "<br>\n";
-            echo "Group Size: ", $value["group_size"], "<br>\n";
-            echo "Reason for Visit: ", $value["reason"], "<br>\n";
-            echo "Additional Requests: ", $value["additional_requests"], "<br><br>\n";
-        }
+
+        // foreach($result as $value) {
+        //     echo "Name: ", $value["name"], "<br>\n";
+        //     echo "Email: ", $value["email"], "<br>\n";
+        //     echo "Phone: ", $value["phone"], "<br>\n";
+        //     echo "Destination: ", $value["destination"], "<br>\n";
+        //     echo "Date: ", $value["date"], "<br>\n";
+        //     echo "Time: ", $value["time"], "<br>\n";
+        //     echo "Group Size: ", $value["group_size"], "<br>\n";
+        //     echo "Reason for Visit: ", $value["reason"], "<br>\n";
+        //     echo "Additional Requests: ", $value["additional_requests"], "<br><br>\n";
+        // }
+
+        //Cara 3
+        $result=$conn->query("$sql");
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $rows = $result->fetchAll();
 
         //Cara 2
         
