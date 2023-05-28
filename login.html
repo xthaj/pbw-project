@@ -12,17 +12,21 @@
     <body id="login-page">
          <div class="container" id="loginPageContainer">
              <div class="signin-register">
-                <form class="sign-up-form" onsubmit="return validateSignUpForm()">
+                <form class="sign-up-form" id = "signUpForm" action="user\process_register.php" method="post">
                     <h1>Create Account</h1>
-                    <input type="text" name="txt" placeholder="Name" required>
+                    <input type="text" name="name" placeholder="Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="password" name="pswd" placeholder="Password" required>
+                    <input type="password" name="pswd2" placeholder="Confirm Password" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="text" name="address" placeholder="Address" required>
                     <button type="submit">Sign Up</button>
+                    <!-- <div id="errorMessages"></div> -->
                     <p class="account-text change-green">Already have an account? <a href="#" class="change-lightgreen" id="signInButton2">Sign In</a></p>
                     
                 </form>
                     
-                <form class="sign-in-form" onsubmit="return validateSignInForm()">
+                <form class="sign-in-form" onsubmit="return validateSignInForm()" action="user\process_login.php" method="post">
                     <h1>Sign In</h1>
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="password" name="pswd" placeholder="Password" required>
@@ -57,7 +61,7 @@
         
          
 
-        <script src="script-home.js"></script>
+        <script src="script_login.js"></script>
         <script> loginPage();</script>
 
     </body>

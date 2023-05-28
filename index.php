@@ -11,84 +11,10 @@
     </head>
 
     <body>
-      <header>
-          <div class="logo">
-              <img src="image/logo.png" alt="logo">
-          </div>
-
-          <p class="page-title">CROAK CULTURE</p>
-
-          <ul>
-              <li>
-                  <a href="https://www.instagram.com/athathathatha">
-                      <i class="fa-brands fa-instagram"></i>
-                  </a>
-              </li>
-              <li>
-                  <a href="mailto:athajuli@gmail.com">
-                      <i class="fa-solid fa-envelope"></i>
-                  </a>
-              </li>
-          </ul> 
-      </header>
-
-      <nav>
-          <div class="container"> 
-              <!-- search bar -->
-              <form class="search-bar" action="search-action_page.php">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-              </form>
-
-            <div class="subcontainer">
-              <nav class="navbar">
-              <!-- nav on right side -->
-                <ul class="nav-menu">
-                  <li class="nav-item">
-                      <a href="index.html" class="nav-link">Home</a>        
-                    </li>
-
-                  <li class="nav-item">
-                    <a href="gallery.html" class="nav-link">Gallery</a>        
-                  </li>
-
-                  <li class="nav-item">
-                      <a href="learn.html" class="nav-link">Learn</a>        
-                    </li>
-
-                    <li class="nav-item">
-                      <a href="visit.html" class="nav-link">Visit</a>        
-                    </li>
-                  <li class="nav-item">
-                      <a href="support.html" class="nav-link">Support</a>        
-                  </li>
-
-                  <li class="nav-item">
-                    <div class="dropdown" data-dropdown>
-                      <button class="link" data-dropdown-button>Account</button>
-                      <div class="dropdown-menu">
-                        <a href="my-visits.html">My Visits</a>
-                        <a href="given-support.html">Given Support</a>
-                        <a href="login.html">Log In</a>
-                      </div>
-                    </div>
-                  </li>
-
-                </ul>
-
-                <div class="hamburger">
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                  <span class="bar"></span>
-                </div>
-
-              </nav>
-            </div>
-          </div>
-      </nav>
-
+      <?php  
+        include ('header.php');
+      ?>
+    
       <main>
         <div class="hero">
           <div class="hero-texts">
@@ -151,36 +77,10 @@
           </div>
         </section>
       </main>
-
-      <footer>
-        <div class="footer-wrap">
-          <div class="footer-logo">
-            <a href="https://github.com/xthaj" target="_blank">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
-  
-          <div class="footer-col">
-            <p>About the website</p>
-            <ul>
-              <li><a href="https://www.si.edu" target="_blank">Reference and Sources</a></li>
-              <li><a href="https://docs.google.com/document/d/1uS482CSX6L9nysM13FL_yskhoIGfC5mF2-P07MzQL2o/edit?usp=sharing" target="_blank">Other Attributions</a></li>
-              <li><a href="https://youtube.com/playlist?list=PLl2VaUX1bspnsR8EGU1zAyygDsSYrH8P2" target="_blank" rel="noopener noreferrer">Tutorials Followed</a></li>
-              <li><a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Important</a></li>
-            </ul>
-          </div>
-  
-          <div class="footer-col">
-            <p>For & By</p>
-            <ul>
-              <li>PBW Project 2023</li>
-              <li>Atha Juli R</li>
-            </ul>
-          </div>
-        </div>
-      </footer>
-      
-      <script src="script-home.js"></script>
+     
+      <?php  
+        include ('footer.php');
+      ?>
 
       </body>
 </html>
