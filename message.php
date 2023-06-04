@@ -1,3 +1,7 @@
+<?php 
+session_start();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,9 +15,7 @@
     </head>
 
     <body class="main-layout">
-      
-
-      <div style="background-color:purple;">
+      <div>
         <header>
           <div class="logo">
               <img src="image/logo.png" alt="logo">
@@ -34,12 +36,18 @@
               </li>
           </ul> 
       </header>
-  
-
       </div>
 
-      <div style="background-color: black;">
+      <div class="message">
 
+        <?php 
+          if (isset($_GET['success'])) {
+            $successMessage = $_GET['success'];
+            echo '<p>' . $successMessage . '</p>';
+        }
+        ?>
+        <button><a href="index.php"></a>Back to Home</button>
+       
       </div>
 
       <div style="background-color: red;">
