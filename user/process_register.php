@@ -43,11 +43,10 @@
             $conn = null;
 
             $successMessage = "Your account was made successfully!";
-            header("Location: php09D.php?success=" . urlencode($successMessage));
+            header("Location: ../message.php?success=" . urlencode($successMessage));
             exit;
         }
 
-        
 
     } catch(PDOException $e) {
         echo "Connection failed: " . $e->getMessage();

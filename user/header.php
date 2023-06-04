@@ -10,7 +10,7 @@
     
     <header>
         <div class="logo">
-            <img src="image/logo.png" alt="logo">
+            <img src="../image/logo.png" alt="logo">
         </div>
 
         <p class="page-title">CROAK CULTURE</p>
@@ -48,7 +48,7 @@
                </li>
 
               <li class="nav-item">
-                <a href="gallery.php" class="nav-link">Gallery</a>        
+                <a href="gallery.html" class="nav-link">Gallery</a>        
               </li>
 
               <li class="nav-item">
@@ -61,8 +61,16 @@
               <li class="nav-item">
                   <a href="support.html" class="nav-link">Support</a>        
               </li>
-              <li class="nav-item">
-                  <a href="login.php" class="nav-link">Log In</a>        
+
+             <li class="nav-item">
+                <div class="dropdown" data-dropdown>
+                  <button class="link" data-dropdown-button>My Account</button>
+                  <div class="dropdown-menu">
+                    <a href="my-visits.html">My Visits</a>
+                    <a href="given-support.html">Given Support</a>
+                    <a href="login.html">Log Out</a>
+                  </div>
+                </div>
               </li>
 
             </ul>
