@@ -56,7 +56,7 @@
                </li>
 
                <li class="nav-item">
-                  <a href="visit.html" class="nav-link">Visit</a>        
+                  <a href="visit.php" class="nav-link">Visit</a>        
                 </li>
               <li class="nav-item">
                   <a href="support.html" class="nav-link">Support</a>        

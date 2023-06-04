@@ -869,6 +869,18 @@ footer  {
   padding: 5px 0;
 }
 
+
+#visit-form .visit-message p {
+  font-size: 1.5em;
+  color: var(--green-color);
+  text-align: center;
+}
+
+#support-form .support-message p {
+  font-size: 1.5em;
+  color: var(--green-color);
+  text-align: center;
+}
 /* #support-form .radio-menus input[type="file"] {
   background-color: var(--green-color);
   color: var(--cream-color);

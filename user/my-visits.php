@@ -212,8 +212,5 @@
           </div>
         </footer>
 
-        <script src="script-home.js"></script>
-        <!-- <script> window.onload = displayVisitors;</script> -->
-        
     </body>
 </html>

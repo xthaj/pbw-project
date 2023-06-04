@@ -24,11 +24,13 @@
         // echo "Data berhasil ditambahkan";
 
         $last_id = $conn->lastInsertId();
-        echo "Data berhasil ditambahkan, id terakhir = ", $last_id;
+        // echo "Data berhasil ditambahkan, id terakhir = ", $last_id;
 
         $conn = null;
 
-        //radio button what do?
+        $successMessage = "Thank you for your submission. Please check your email for more information (there is no email jk)";
+        header("Location: ../visit.php?success=" . urlencode($successMessage));
+        exit;
         
     } catch(PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
