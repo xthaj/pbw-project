@@ -59,7 +59,7 @@
                   <a href="visit.php" class="nav-link">Visit</a>        
                 </li>
               <li class="nav-item">
-                  <a href="support.html" class="nav-link">Support</a>        
+                  <a href="support.php" class="nav-link">Support</a>        
               </li>
               <li class="nav-item">
                   <a href="login.php" class="nav-link">Log In</a>        

@@ -20,7 +20,17 @@
 
                 <div id="support-form">
                   <form onsubmit="return validateSupportForm()" action="dbconn_support/add.php" method="post" enctype="multipart/form-data">
-                    <div class="form-item">
+                    
+                  <div class="support-message">
+                      <?php 
+                            if (isset($_GET['success'])) {
+                                $successMessage = $_GET['success'];
+                                echo '<br><p>' . $successMessage . '</p><br>';
+                            }
+                        ?>
+                    </div>
+                  
+                  <div class="form-item">
                       <span>Name</span>
                       <input type="text" id="name" name="name" required>
                     </div>
@@ -89,14 +99,7 @@
                       </div>
                     </div>
                 
-                    <div class="support-message">
-                      <?php 
-                            if (isset($_GET['success'])) {
-                                $successMessage = $_GET['success'];
-                                echo '<br><p>' . $successMessage . '</p><br>';
-                            }
-                        ?>
-                    </div>
+                    
 
                     <input type="submit" value="Submit Donation" class="form-submit-btn">
                   </form>

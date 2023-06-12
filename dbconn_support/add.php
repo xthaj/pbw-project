@@ -73,8 +73,8 @@ try {
     // Close the connection
     $conn = null;
 
-    // $successMessage = "Thank you for your donation.";
-    // header("Location: ../support.php?success=" . urlencode($successMessage));
+    $successMessage = "Thank you for your donation.";
+    header("Location: ../support.php?success=" . urlencode($successMessage));
     exit;
 } catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();

@@ -22,7 +22,15 @@
             
             <div id="visit-form" >
               <form onsubmit="return validateVisitForm()" action="dbconn_visit/add.php" method="post">
-                <div class="form-item">
+              <div class="visit-message">
+                   <?php 
+                        if (isset($_GET['success'])) {
+                            $successMessage = $_GET['success'];
+                            echo '<br><p>' . $successMessage . '</p><br>';
+                        }
+                    ?>
+                </div>  
+              <div class="form-item">
                   <span>Name</span>
                   <input type="text" id="name" name="name" required>
                 </div>
@@ -85,14 +93,7 @@
                   <textarea id="additional-requests" name="additional-requests" rows="4" cols="50"></textarea>
                 </div>
 
-                <div class="visit-message">
-                   <?php 
-                        if (isset($_GET['success'])) {
-                            $successMessage = $_GET['success'];
-                            echo '<br><p>' . $successMessage . '</p><br>';
-                        }
-                    ?>
-                </div>
+                
 
                 <input type="submit" value="Submit" class="form-submit-btn">
               </form>

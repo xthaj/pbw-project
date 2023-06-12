@@ -66,9 +66,9 @@
                 <div class="dropdown" data-dropdown>
                   <button class="link" data-dropdown-button>My Account</button>
                   <div class="dropdown-menu">
-                    <a href="my-visits.html">My Visits</a>
-                    <a href="given-support.html">Given Support</a>
-                    <a href="login.html">Log Out</a>
+                    <a href="my-visits.php">My Visits</a>
+                    <a href="given-support.php">Given Support</a>
+                    <a href="login.php">Log Out</a>
                   </div>
                 </div>
               </li>

@@ -6,6 +6,8 @@
         <title>Croak Culture</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="image/logo.png">
+
         <script src="https://kit.fontawesome.com/65d6be58fa.js" crossorigin="anonymous"></script>
 
     </head>
