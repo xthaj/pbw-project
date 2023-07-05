@@ -99,8 +99,6 @@
                       </div>
                     </div>
                 
-                    
-
                     <input type="submit" value="Submit Donation" class="form-submit-btn">
                   </form>
                 </div>

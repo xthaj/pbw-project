@@ -45,23 +45,28 @@
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h1>Welcome Back!</h1>
-                    <p>Find out what's new and updates on Croak projects</p>
-                    <p>Not a member?</p>
-                    <button id="signUpButton">Sign Up</button>
+
+                    <h1>Welcome!</h1>
+                    <p>Discover and expand your knowledge as you explore our exhibits.</p>
+                    <p>Already a member?</p>
+
+                    <button id="signUpButton">Sign In</button>
                 </div>
                 <img src="image/login_image.png" alt="">
             </div>
 
             <div class="panel right-panel">
                 <div class="content">
-                    <h1>Welcome!</h1>
-                    <p>Discover and expand your knowledge as you explore our exhibits.</p>
-                    <p>Already a member?</p>
-                    <button id="signInButton">Sign In</button>
+                    <h1>Welcome Back!</h1>
+                    <p>Find out what's new and updates on Croak projects</p>
+                    <p>Not a member?</p>
+
+                    <button id="signInButton">Sign Up</button>
                 </div>
                 <img src="image/register_image.png" alt="">
             </div>
+
+            
         </div>
     </div>
 
