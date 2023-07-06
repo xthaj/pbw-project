@@ -78,14 +78,12 @@ h2 {
 /* link hovering underline */
 a {
   position: relative;
-  /* line-height: 1; */
 }
 
 a::after {
   content: '';
   display: block;
   height: 2px; 
-  /* width: fit-content; */
   width: 0;
   background-color: var(--lightorange-color);
   position: absolute;
@@ -97,6 +95,17 @@ a::after {
 a:hover::after {
   width: 100%;
 }
+
+a.exclude::after {
+  height: 0px;
+}
+
+
+a.exclude:hover {
+  color: var(--lightorange-color);
+  transition: width 0.4s ease-in-out;
+}
+
 
 /* #endregion  */
 
@@ -712,6 +721,31 @@ footer  {
   color: var(--lightgreen-color);
 }
 
+#pagination-container {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+#pagination-container a {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  text-decoration: none;
+  color: var(--green-color);
+  border: 1px solid var(--green-color);
+  border-radius: 3px;
+}
+
+#pagination-container a.active {
+  background-color: var(--green-color);
+  color: var(--cream-color);
+}
+
+#learn a.exclude:hover {
+  color: var(--lightorange-color);
+  transition: width 0.4s ease-in-out;
+}
+
 /* these are for when rendering singular post */
 
 #learn .blogposts-changepost {
@@ -1073,15 +1107,31 @@ footer  {
   margin-bottom: 1em;
 }
 
+#collection-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 1em;
+}
+
 .collection {
-  overflow:hidden;
   background-color: var(--green-color);
-  display: inline-block;
-  width: 300px;
+  width: 100%;
   height: 400px;
+  max-width: 450px;
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px;
+}
+
+.collection-image {
+  aspect-ratio: 4 / 3;
+  max-height: 60%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  max-width: 100%;
+
+  object-fit: cover;
+  object-position: top;
 }
 
 .collection-single {
@@ -1102,6 +1152,8 @@ footer  {
 
 .collection-image-container {
   position: relative;
+  overflow: hidden;
+  max-height: 60%;
 }
 
 .bookmark-button {
@@ -1111,16 +1163,6 @@ footer  {
   right: 1em;
   background-color: transparent;
 
-  border: none;
-  cursor: pointer;
-}
-
-.collection-image {
-  aspect-ratio: 4 / 3;
-  max-height: 60%;
-  max-width: 100%;
-  object-fit: cover;
-  object-position: top;
 }
 
 .collection-singleimage {
@@ -1142,11 +1184,7 @@ button .fa-bookmark {
   transition: all 0.3s ease-in-out;
 }
 
-#collection-container {
-  display: grid;
-  grid-auto-flow: column;
-  overflow-y: hidden;
-}
+
 
 .collection-details {
   padding: 20px;
@@ -1172,6 +1210,14 @@ button .fa-bookmark {
     width: 100%;
     margin: 0 0 1em;
   }
+}
+
+.gallery-item-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
 }
 
 /* #endregion gallery */
@@ -1242,6 +1288,11 @@ button .fa-bookmark {
   align-items: center;
   justify-content: center;
   text-align: justify;
+}
+
+.hero-learn p {
+  text-align:left;
+  
 }
 
 .hero-image {

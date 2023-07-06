@@ -92,11 +92,14 @@
                           <h2 class="post-title"></h2>
                           <p class="post-date"></p>
                           <p class="post-content"></p>
-                          <a class="post-link">Read More</a>
+                          <a class="post-link exclude">Read More</a>
                       </div>
                   </div>
               </template>
             </div>
+
+            <div id="pagination-container"></div>
+
         </main>
         
         <footer>
@@ -128,7 +131,7 @@
         </footer>
 
         <script src="script_home.js"></script>
-        <script> window.onload = renderPosts;</script>
+        <script> window.onload = renderPosts(1);</script>
         
     </body>
 </html>

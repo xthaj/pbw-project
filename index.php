@@ -13,9 +13,75 @@
     </head>
 
     <body>
-      <?php  
-        include ('header.php');
-      ?>
+    <header>
+        <div class="logo">
+            <img src="image/logo.png" alt="logo">
+        </div>
+
+        <p class="page-title">CROAK CULTURE</p>
+
+        <ul>
+            <li>
+                <a href="https://www.instagram.com/athathathatha">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:athajuli@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </li>
+        </ul> 
+    </header>
+
+    <nav>
+      <div class="container"> 
+          <!-- search bar -->
+          <form class="search-bar" action="search-action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+
+        <div class="subcontainer">
+          <nav class="navbar">
+          <!-- nav on right side -->
+            <ul class="nav-menu">
+              <li class="nav-item">
+                  <a href="index.php" class="nav-link">Home</a>        
+               </li>
+
+              <li class="nav-item">
+                <a href="main/gallery.php" class="nav-link">Gallery</a>        
+              </li>
+
+              <li class="nav-item">
+                  <a href="main/learn.html" class="nav-link">Learn</a>        
+               </li>
+
+               <li class="nav-item">
+                  <a href="main/visit.php" class="nav-link">Visit</a>        
+                </li>
+              <li class="nav-item">
+                  <a href="main/support.php" class="nav-link">Support</a>        
+              </li>
+              <li class="nav-item">
+                  <a href="main/login.php" class="nav-link">Log In</a>        
+              </li>
+
+            </ul>
+
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+
+          </nav>
+        </div>
+      </div>
+    </nav>
     
       <main>
         <div class="hero">
@@ -25,7 +91,7 @@
             </div>
             <div class="hero-learn"> 
               <p>Ensure the best experience in your visit, book us beforehand</p>
-              <button onclick="window.location.href='visit.html'">Visit Us</button>
+              <button onclick="window.location.href='main/visit.html'">Visit Us</button>
             </div>
           </div>
 
@@ -41,9 +107,9 @@
               <img src="image/logo.png" alt="logo">
               <p>
                 Croak Culture is a museum, education, and research complex. We are a community of learning and 
-                an opener of doors. Join us on a voyage of discovery. Explore our vast digital <a href="gallery.php"><strong>gallery</strong></a> 
-                and learn online. <a href="learn.html"><strong>Check out</strong></a> and <a href="support.html"><strong>support</strong></a> 
-                our ongoing projects. Book a <a href="visit.html"><strong>visit</strong></a> to have a full experience in our museums.
+                an opener of doors. Join us on a voyage of discovery. Explore our vast digital <a href="main/gallery.php"><strong>gallery</strong></a> 
+                and learn online. <a href="main/learn.html"><strong>Check out</strong></a> and <a href="main/support.html"><strong>support</strong></a> 
+                our ongoing projects. Book a <a href="main/visit.html"><strong>visit</strong></a> to have a full experience in our museums.
               </p>
             </div>
           </div>
@@ -81,7 +147,7 @@
       </main>
      
       <?php  
-        include ('footer.php');
+        include ('main/footer.php');
       ?>
 
       </body>

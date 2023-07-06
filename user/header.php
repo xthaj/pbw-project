@@ -48,7 +48,7 @@
                </li>
 
               <li class="nav-item">
-                <a href="gallery.html" class="nav-link">Gallery</a>        
+                <a href="gallery.php" class="nav-link">Gallery</a>        
               </li>
 
               <li class="nav-item">
@@ -68,7 +68,7 @@
                   <div class="dropdown-menu">
                     <a href="my-visits.php">My Visits</a>
                     <a href="given-support.php">Given Support</a>
-                    <a href="login.php">Log Out</a>
+                    <a href="../logout.php">Log Out</a>
                   </div>
                 </div>
               </li>

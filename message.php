@@ -46,7 +46,7 @@ session_start();
             echo '<p>' . $successMessage . '</p>';
         }
         ?>
-        <button><a href="index.php"></a>Back to Home</button>
+      <button><a href="index.php">Back to Home</a></button>
        
       </div>
 

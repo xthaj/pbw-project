@@ -1,7 +1,7 @@
 <?php
     $servername = "localhost";
     $username = "root";
-    $password = ""; // replace 'password' with the actual password for the user
+    $password = "";
     
     try {
         $conn = new PDO("mysql:host=$servername;dbname=croakculture", $username, $password);

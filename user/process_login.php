@@ -31,6 +31,9 @@
                 if ($password === $row["password"]) {
                     // Successful login
                     $_SESSION['email'] = $email;
+                    $_SESSION['name'] = $row['name'];
+                    $_SESSION['phone'] = $row['phone'];
+
                     header("Location: ../user/index.php");
                     exit;
                 } else {

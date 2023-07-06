@@ -10,7 +10,7 @@
     
     <header>
         <div class="logo">
-            <img src="image/logo.png" alt="logo">
+            <img src="../image/logo.png" alt="logo">
         </div>
 
         <p class="page-title">CROAK CULTURE</p>
@@ -44,7 +44,7 @@
           <!-- nav on right side -->
             <ul class="nav-menu">
               <li class="nav-item">
-                  <a href="index.php" class="nav-link">Home</a>        
+                  <a href="../index.php" class="nav-link">Home</a>        
                </li>
 
               <li class="nav-item">
