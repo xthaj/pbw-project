@@ -1,6 +1,8 @@
 // ╔══════════════════════════════════════════════════════════╗
-// ║ STICKY NAV                                               ║
+// ║        NAV                                               ║
 // ╚══════════════════════════════════════════════════════════╝
+
+// sticky
 
 const nav = document.querySelector('nav');
 const navOffsetTop = nav.offsetTop;
@@ -46,16 +48,6 @@ document.addEventListener("click", e => {
   });
 });
 
-// submit forms
-
-const submitButtons = document.querySelectorAll('.form-submit-btn');
-
-submitButtons.forEach(function(button) {
-  button.addEventListener('click', function() {
-    button.style.opacity = '0.6';
-  });
-});
-
 //date formatting
 
 function formatDate(dateString) {
@@ -76,180 +68,75 @@ function getDaySuffix(day) {
   }
 }
 
-// Function to display visitor information in the table
-function displayVisitors() {
-  var table = document.getElementById('visitorTable').getElementsByTagName('tbody')[0];
-
-  // Clear existing rows from the table
-  table.innerHTML = '';
-
-  for (var i = 0; i < visitors.length; i++) {
-    var row = table.insertRow(i);
-
-    var contactCell = row.insertCell(0);
-    contactCell.innerHTML = visitors[i].name + '<br>' + visitors[i].phone + '<br>' + visitors[i].email;
-
-    var destCell = row.insertCell(1);
-    destCell.innerHTML = visitors[i].destination;
-
-    var dateCell = row.insertCell(2);
-    dateCell.innerHTML = visitors[i].visitDate;
-
-    var timeCell = row.insertCell(3);
-    timeCell.innerHTML = visitors[i].visitTime;
-
-    var sizeCell = row.insertCell(4);
-    sizeCell.innerHTML = visitors[i].groupSize;
-
-    var reasonCell = row.insertCell(5);
-    reasonCell.innerHTML = visitors[i].reasonForVisit;
-
-    var requestCell = row.insertCell(6);
-    requestCell.innerHTML = visitors[i].additionalRequests;
-  }
-}
-
-function validateVisitForm() {
- const name = document.getElementById('name').value.trim();
- const email = document.getElementById('email').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const destination = document.getElementById('destination').value;
-  const visitDate = document.getElementById('date').value;
-  // const visitTime = document.getElementById('appt').value;
-   const groupSize = document.getElementById('group-size').value;
-  const reasonForVisit = document.querySelector('input[name="reason"]:checked');
-  
-  // Check if required fields are filled out
-  if (!name || !email || !phone || !destination || !reasonForVisit) {
-    alert('Please fill out all required fields.');
-    return false;
-  }
-  
-  const mailRegex = /\S+@\S+\.\S+/;
-  if (!mailRegex.test(email)) {
-    alert('Please enter a valid email address.');
-    return false;
-  }
-  
-  const phoneRegex = /^\+?\d{10,15}$/; 
-  if (!phoneRegex.test(phone)) {
-    alert('Please enter a valid phone number.');
-    return false;
-  }
-
-  const today = new Date();
-  const selectedDate = new Date(visitDate);
-  const oneMonthFromNow = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
-  if (selectedDate < today || selectedDate > oneMonthFromNow) {
-    alert('Please select a date within the next month.');
-    return false;
-  }
-
-  if (groupSize < 1 || groupSize > 20) {
-    alert('Group size must be between 1 and 20.');
-    return false;
-  }
-
-  return true;
-}
-
-function validateSupportForm() {
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const donationAmount = document.querySelector('input[name="donation_amount"]:checked');
-  const donationMethod = document.getElementById('donation-method').value;
-
-  if (!name || !email || !phone || !donationAmount || !donationMethod) {
-    alert('Please fill out all required fields.');
-    return false;
-  }
-
-  const emailRegex = /\S+@\S+\.\S+/;
-  if (!emailRegex.test(email)) {
-    alert('Please enter a valid email address.');
-    return false;
-  }
-
-  const phoneRegex = /^\+?\d{10,15}$/;
-  if (!phoneRegex.test(phone)) {
-    alert('Please enter a valid phone number.');
-    return false;
-  }
-
-  return true;
-}
-
-
 const posts = [
   {
       title: "My First Blog Post",
       content:"Roxie C. Laybourne, whose scientific investigations into bird collisions with airplanes helped start forensic ornithology and enabled engineers to develop aircraft capable of withstanding such accidents, died on Aug. 7 at her farm in Manassas, Va. She was 92. <br> In 1960, when a plane crashed taking off from Logan Airport in Boston, killing all 62 people aboard, Ms. Laybourne, then a scientist at the Smithsonian's National Museum of Natural History, helped investigators conclude that the cause was a flock of starlings caught in one of its engines.<br>Having only charred remains to work with, she developed a novel way to remove oil and gasoline from bits of feathers while keeping them suitable for microscopic examination. Using a microscope, she could then pinpoint minute structural characteristics and identify the bird species or family based on the feathers.\n\n\n\nOver the next decades, Ms. Laybourne helped identify thousands of birds involved in collisions with commercial and military aircraft. Her work gave plane manufacturers information for designing engines that could continue to fly after ingesting the birds, and it helped ornithologists create bird management programs to prevent flocks from gathering near airports.",
       date: new Date("2023-03-19"),
-      image: "image/learn-1.png",
+      image: "../image/learn-1.png",
       url: "learn-samplepost.html"
   },
   {
       title: "My Second Blog Post",
       content: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       date: new Date("2023-04-19"),
-      image: "image/learn-2.jpg",
+      image: "../image/learn-2.jpg",
       url: "post2.html"
   },
   {
       title: "My Third Blog Post",
       content: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       date: new Date("2023-03-19"),
-      image: "image/learn-3.jpg",
+      image: "../image/learn-3.jpg",
       url: "post3.html"
   },
   {
       title: "My Fourth Blog Post",
       content: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       date: new Date("2023-03-21"),
-      image: "image/learn-4.jpg",
+      image: "../image/learn-4.jpg",
       url: "post4.html"
   },
   {
       title: "My Fifth Blog Post",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       date: new Date("2023-03-22"),
-      image: "image/learn-5.jpg",
+      image: "../image/learn-5.jpg",
       url: "post5.html"
   },
   {
       title: "My Sixth Blog Post",
       content: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       date: new Date("2023-03-23"),
-      image: "image/learn-6.jpg",
+      image: "../image/learn-6.jpg",
       url: "post6.html"
   },
   {
       title: "My Seventh Blog Post",
       content: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       date: new Date("2023-03-24"),
-      image: "image/learn-7.jpg",
+      image: "../image/learn-7.jpg",
       url: "post7.html"
   },
   {
       title: "My Eighth Blog Post",
       content: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       date: new Date("2023-03-25"),
-      image: "image/learn-8.jpg",
+      image: "../image/learn-8.jpg",
       url: "post8.html"
   },
   {
       title: "My Ninth Blog Post",
       content: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       date: new Date("2023-03-26"),
-      image: "image/learn-9.jpg",
+      image: "../image/learn-9.jpg",
       url: "post9.html"
   },
   {
       title: "My Tenth Blog Post",
       content: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
       date: new Date("2023-03-27"),
-      image: "image/learn-10.jpg",
+      image: "../image/learn-10.jpg",
       url: "post10.html"
   }
 ];
@@ -425,7 +312,7 @@ var seeAllLink = document.querySelector('.gallery-all');
 // Function to fetch collections based on location
 function fetchCollections(location) {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'main/filter_collections.php?location=' + encodeURIComponent(location), true);
+  xhr.open('GET', '../dbconn_gallery/filter_collections.php?location=' + encodeURIComponent(location), true);
 
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
@@ -461,7 +348,7 @@ const supports = [
     phone: '02183023912',
     donationAmount: 50000,
     donationMethod: 'Transfer Bank',
-    proof: 'image/proof.png',
+    proof: '../image/proof.png',
     preference: ['Exhibits Preservation', 'Projects Funding']
   },
   {
@@ -471,7 +358,7 @@ const supports = [
     phone: '08567238492',
     donationAmount: 100000,
     donationMethod: 'QRIS',
-    proof: 'image/proof.png',
+    proof: '../image/proof.png',
     preference: ['Exhibits Acquirements']
   },
   {
@@ -481,7 +368,7 @@ const supports = [
     phone: '08123456789',
     donationAmount: 25000,
     donationMethod: 'Supermarket',
-    proof: 'image/proof.png',
+    proof: '../image/proof.png',
     preference: ['Exhibits Preservation', 'Projects Funding', 'Exhibits Acquirements']
   },
   {
@@ -491,7 +378,7 @@ const supports = [
     phone: '08129876543',
     donationAmount: 75000,
     donationMethod: 'Transfer Bank',
-    proof: 'image/proof.png',
+    proof: '../image/proof.png',
     preference: []
   },
   {
@@ -501,7 +388,7 @@ const supports = [
     phone: '08123456789',
     donationAmount: 50000,
     donationMethod: 'QRIS',
-    proof: 'image/proof.png',
+    proof: '../image/proof.png',
     preference: ['Exhibits Preservation']
   },
   {
@@ -511,7 +398,7 @@ const supports = [
     phone: '08567890123',
     donationAmount: 100000,
     donationMethod: 'Transfer Bank',
-    proof: 'image/proof.png',
+    proof: '../image/proof.png',
     preference: ['Projects Funding', 'Exhibits Acquirements']
   },
   {
@@ -521,7 +408,7 @@ const supports = [
     phone: '08129876543',
     donationAmount: 25000,
     donationMethod: 'Supermarket',
-    proof: 'image/proof.png',
+    proof: '../image/proof.png',
     preference: ['Exhibits Preservation']
   },
   {
@@ -531,7 +418,7 @@ const supports = [
     phone: '08123456789',
     donationAmount: 50000,
     donationMethod: 'QRIS',
-    proof: 'image/proof.png',
+    proof: '../image/proof.png',
     preference: ['Exhibits Acquirements']
   },
   {
@@ -541,7 +428,7 @@ const supports = [
     phone: '08567890123',
     donationAmount: 75000,
     donationMethod: 'Transfer Bank',
-    proof: 'image/proof.png',
+    proof: '../image/proof.png',
     preference: ['Projects Funding']
   },
   {
@@ -551,7 +438,7 @@ const supports = [
     phone: '08129876543',
     donationAmount: 100000,
     donationMethod: 'QRIS',
-    proof: 'image/proof.png',
+    proof: '../image/proof.png',
     preference: ['Exhibits Preservation', 'Projects Funding', 'Exhibits Acquirements']
   }
 ];
